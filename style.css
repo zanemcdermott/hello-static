@@ -1,0 +1,19 @@
+body {
+    background-color: #f0f8ff; /* soft blue background */
+    font-family: Arial, sans-serif; /* clean font */
+    text-align: center; /* center all text */
+}
+
+h1 {
+    color: darkblue;
+}
+
+h2 {
+    color: darkgreen;
+}
+
+img {
+    border: 3px solid black;
+    border-radius: 10px;
+    margin: 10px;
+}
