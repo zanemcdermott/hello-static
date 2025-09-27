@@ -33,3 +33,39 @@ footer {
     color: white; /* white text */
     padding: 10px;
 }
+
+/* Dark overlay behind popup */
+.popup {
+  display: none;                  /* hidden by default */
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);    /* dim the background */
+  justify-content: center;
+  align-items: center;
+}
+
+/* The actual popup box */
+.popup-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.3);
+}
+
+.popup-content h2 {
+  margin-top: 0;
+}
+
+.popup-content button {
+  margin-top: 15px;
+  padding: 8px 12px;
+  border: none;
+  background: #2563eb;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
