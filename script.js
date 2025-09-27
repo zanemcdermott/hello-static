@@ -3,15 +3,17 @@ document.addEventListener("DOMContentLoaded", () => {
   const openBtn = document.getElementById("openPopupBtn");
   const closeBtn = document.getElementById("closePopupBtn");
 
+  // Show popup
   openBtn.addEventListener("click", () => {
-    popup.style.display = "flex";   // show popup
+    popup.style.display = "flex";   // now visible
   });
 
+  // Hide popup
   closeBtn.addEventListener("click", () => {
-    popup.style.display = "none";   // hide popup
+    popup.style.display = "none";   // hide again
   });
 
-  // Close if you click outside the popup box
+  // Hide if clicking the background (outside the box)
   popup.addEventListener("click", (e) => {
     if (e.target === popup) {
       popup.style.display = "none";
