@@ -17,3 +17,19 @@ img {
     border-radius: 10px;
     margin: 10px;
 }
+
+/* Make the whole page stretch to the full height of the browser */
+html, body {
+    height: 100%;
+    margin: 0; /* remove default spacing */
+    display: flex;
+    flex-direction: column; /* stack items top-to-bottom */
+}
+
+/* Push the footer to the bottom */
+footer {
+    margin-top: auto; /* takes up remaining space */
+    background-color: #222; /* dark background */
+    color: white; /* white text */
+    padding: 10px;
+}
