@@ -1,43 +1,305 @@
 <!doctype html>
-<html>
-  <head>
-        <link rel="stylesheet" href="style.css">
-    <title>Hello Zane</title>
-  </head>
-  <body>
-    <h1>Hello, world!</h1>
-    <p>This is my very first web page</p>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sidekick Sites — Simple sites & ads that get leads</title>
+  <meta name="description" content="No-fuss landing pages, contact funnels, and paid social ads. Sidekick Sites helps small businesses get more leads, fast.">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html" aria-label="Sidekick Sites home">
+        <!-- inline logo mark -->
+        <svg class="logo-mark" width="28" height="28" viewBox="0 0 64 64" aria-hidden="true">
+          <defs>
+            <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+              <stop stop-color="#2563eb" offset="0"/>
+              <stop stop-color="#7c3aed" offset="1"/>
+            </linearGradient>
+          </defs>
+          <circle cx="32" cy="32" r="28" fill="url(#g)"/>
+          <!-- stylised S + cape -->
+          <path d="M41 18c-5-2-13-1-16 4-4 7 6 8 9 9 3 1 5 2 4 5-1 2-5 4-9 4-4 0-7-1-10-3"
+                fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+          <path d="M40 30l10-4-4 10" fill="#fff" opacity=".85"/>
+        </svg>
+        <span class="brand-text">Sidekick Sites</span>
+      </a>
+      <nav class="nav">
+        <a href="#ads">Ads</a>
+        <a href="#services">Services</a>
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact" class="btn btn-primary btn-sm">Start a project</a>
+      </nav>
+    </div>
+  </header>
 
-    <h2>About me</h2>
-    <p>I am learning how to build websites step by step.</p>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <h1>Simple sites & ads that <span class="accent">get leads</span>.</h1>
+        <p class="lead">We build quick, conversion-focused pages and run no-nonsense paid social so your inbox fills and the phone rings.</p>
+        <div class="actions">
+          <a class="btn btn-primary shine" href="#contact">Get a quote</a>
+          <a class="btn btn-ghost" href="#services">What we do</a>
+        </div>
+        <ul class="bullets">
+          <li>Launch in days, not weeks</li>
+          <li>Form + email notifications, zero backend</li>
+          <li>Optional Airtable dashboard later</li>
+        </ul>
+      </div>
+      <div class="hero-media">
+        <img src="https://images.unsplash.com/photo-1557800636-894a64c1696f?q=80&w=1600&auto=format&fit=crop"
+             alt="Clean marketing site on a laptop" loading="lazy">
+      </div>
+    </div>
+  </section>
 
-
-    <img src="money.jpg" alt="my money">
-    
-    <button onclick="sayHello()">Click Me!</button>
-
-
-<!-- Button to trigger popup -->
-<button id="openPopupBtn">Show Popup</button>
-
-<!-- Popup box -->
-<div id="popup" class="popup">
-  <div class="popup-content">
-    <h2>UH-OH</h2>
-    <img src="jew.jpg" alt="Jumpscare Jew" style="width: 100%; border-radius: 8px; margin-bottom: 10px;"
-    <p>I hope you're not a jew!</p>
-    <button id="closePopupBtn">Close</button>
+    <!-- Ads -->
+    <section id="ads" class="section section-alt">
+  <div class="container">
+    <h2 class="section-title">Paid Social Ads</h2>
+    <div class="grid cards-3">
+      <article class="card">
+        <h3>Plan & setup</h3>
+        <p>Offer, targeting and budget plan. Pixel & tracking wired. Campaigns live within a few days.</p>
+      </article>
+      <article class="card">
+        <h3>Creative that fits</h3>
+        <p>Scroll-stopping image/video variations designed for your audience. We test and iterate quickly.</p>
+      </article>
+      <article class="card">
+        <h3>Weekly tweaks & report</h3>
+        <p>We review results, shift budget to winners, and send a one-page update in plain English.</p>
+      </article>
+    </div>
+    <div class="actions" style="margin-top:16px">
+      <a class="btn btn-primary shine" href="#contact">Get an ad plan</a>
+      <a class="btn btn-ghost" href="#services">See all services</a>
+    </div>
   </div>
-</div>
+</section>
 
-<!-- Keep your script include at the bottom -->
-<script src="./script.js"></script>
+  <!-- Services -->
+  <section id="services" class="section">
+    <div class="container">
+      <h2 class="section-title">Services</h2>
+      <div class="grid cards-4">
+        <article class="card">
+          <h3>Landing pages</h3>
+          <p>Focused, fast pages with clear copy and strong calls-to-action.</p>
+        </article>
+        <article class="card">
+          <h3>Contact funnels</h3>
+          <p>Frictionless forms, email alerts, optional CRM/Airtable logging.</p>
+        </article>
+        <article class="card">
+          <h3>Paid social ads</h3>
+          <p>Meta/Instagram (TikTok optional). Creative, budgets, weekly tweaks & reporting.</p>
+        </article>
+        <article class="card">
+          <h3>Speed & SEO basics</h3>
+          <p>Lightweight code, proper metadata, share cards and sitemaps.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work (placeholder) -->
+  <section id="work" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Recent work</h2>
+      <div class="grid cards-3">
+        <article class="card card-outline"><h4>Bella Plumbing</h4><p>Local leads +52% in 30 days.</p></article>
+        <article class="card card-outline"><h4>Acme Landscapes</h4><p>Booking requests up 2.1×.</p></article>
+        <article class="card card-outline"><h4>Coastal Physio</h4><p>From brochureware to bookings.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- About with your photo -->
+  <section id="about" class="section">
+    <div class="container about-grid">
+      <div class="about-media">
+        <img src="images/zane.jpg" alt="Zane giving two thumbs up" loading="lazy">
+      </div>
+      <div class="about-copy">
+        <h2 class="section-title">Your friendly sidekick</h2>
+        <p class="muted">I’m Zane. I keep things simple: ship a clean page that converts, wire the form to your inbox, and—when you’re ready—run paid social to keep the pipeline full. No fluff, no jargon.</p>
+        <ul class="checklist">
+          <li>Plain-English updates</li>
+          <li>Transparent budgets</li>
+          <li>Lead tracking you can actually read</li>
+        </ul>
+        <div class="actions"><a href="#contact" class="btn btn-primary">Let’s talk</a></div>
+      </div>
+    </div>
+  </section>
+
+  
+  <!-- FAQ -->
+  <section id="faq" class="section">
+  <div class="container">
+    <h2 class="section-title">Why choose Sidekick Sites?</h2>
+
+    <div class="faq">
+      <details>
+        <summary>What do you do each month?</summary>
+        <div class="answer">
+          <ul>
+            <li>Keep your landing page fast, tidy and up to date</li>
+            <li>Manage paid social (Meta/Instagram; TikTok optional)</li>
+            <li>Test creatives/offers, shift budget to winners</li>
+            <li>Track leads (UTMs, page URL, timestamps) and inbox alerts</li>
+            <li>Send a plain-English weekly summary + monthly roll-up</li>
+          </ul>
+        </div>
+      </details>
+
+      <details>
+        <summary>Who owns what?</summary>
+        <div class="answer">
+          <p>You own your <strong>domain, brand assets, and ad accounts</strong>. We run everything for you.</p>
+          <p>We provide the site and creative templates on a <strong>managed license</strong> while you’re subscribed. Want to take the site with you later? There’s a simple <strong>buyout option</strong> for a full handover.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>How does billing work?</summary>
+        <div class="answer">
+          <p>One-time <strong>setup fee</strong> to launch; then a monthly <strong>management fee</strong>. Your ad spend is paid directly to the platforms (you keep control of budgets). We suggest a <strong>3-month minimum</strong> to get meaningful learnings, then month-to-month.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>What results should I expect?</summary>
+        <div class="answer">
+          <p>Our job is to <strong>increase qualified enquiries</strong>, not just clicks. We measure:</p>
+          <ul>
+            <li>Leads per week/month and lead source</li>
+            <li>Cost per lead from ads</li>
+            <li>Page contact-rate (visits → enquiries)</li>
+          </ul>
+          <p>We start lean, then iterate based on data.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Do you outsource?</summary>
+        <div class="answer">
+          <p>We’re your <strong>single point of contact</strong>. If we bring in specialists (e.g., video editor), they work under our processes and quality bar. You’ll still get one clear plan and one invoice.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Can I pause or cancel?</summary>
+        <div class="answer">
+          <p>Yes—after the initial term, it’s month-to-month. You can pause ads or the plan with <strong>14 days’ notice</strong>. If you want a full site handover, choose the <strong>buyout</strong> option.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="actions" style="margin-top:16px">
+      <a class="btn btn-primary shine" href="#contact">Start a managed plan</a>
+    </div>
+  </div>
+</section>
 
 
-    <footer>
-        <p>Site created by Zane, 2025 🚀</p>
-    </footer>
 
+  <!-- Contact (integrated) -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="contact-grid">
+        <div>
+          <h2 class="section-title">Tell us what you need</h2>
+          <p class="muted">Quick form. Real response. We usually reply same day.</p>
+        </div>
 
-  </body>
+        <form id="lead-form" class="form" action="https://formspree.io/f/mqayenbj" method="POST">
+          <!-- Hidden metadata -->
+          <input type="hidden" name="client_id" value="sidekick-sites">
+          <input type="hidden" name="site_url" id="site_url">
+          <input type="hidden" name="page_title" id="page_title">
+          <input type="hidden" name="referrer" id="referrer">
+          <input type="hidden" name="utm_source" id="utm_source">
+          <input type="hidden" name="utm_medium" id="utm_medium">
+          <input type="hidden" name="utm_campaign" id="utm_campaign">
+          <input type="hidden" name="utm_term" id="utm_term">
+          <input type="hidden" name="utm_content" id="utm_content">
+          <input type="hidden" name="_subject" value="New website lead — Contact form">
+          <input type="text" name="_gotcha" style="display:none">
+
+          <div class="row-2">
+            <div>
+              <label for="name">Name</label>
+              <input class="input" id="name" name="name" autocomplete="name" required />
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input class="input" id="email" name="email" type="email" autocomplete="email" required />
+            </div>
+          </div>
+
+          <div class="row-2">
+            <div>
+              <label for="phone">Phone</label>
+              <input class="input" id="phone" name="phone" type="tel" autocomplete="tel" pattern="^[0-9+()\\s-]{7,}$" placeholder="+61 412 345 678" />
+            </div>
+            <div>
+              <label for="service">Service</label>
+              <select class="input" id="service" name="service">
+                <option>Landing page</option>
+                <option>Contact funnel</option>
+                <option>Paid social ads</option>
+                <option>Speed & SEO basics</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label for="message">What do you need help with?</label>
+            <textarea class="textarea" id="message" name="message" rows="4" placeholder="Landing page + contact flow; happy to start small and iterate." required></textarea>
+          </div>
+
+          <label class="consent">
+            <input type="checkbox" id="consent" name="consent" required>
+            <span>I agree to the <a href="privacy.html" target="_blank" rel="noopener">Privacy&nbsp;Policy</a>.</span>
+          </label>
+
+          <div class="actions">
+            <button class="btn btn-primary shine" type="submit">Send</button>
+          </div>
+
+          <p id="formFeedback" role="status" aria-live="polite" class="muted"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <p class="muted">© <span id="year"></span> Sidekick Sites</p>
+      <nav class="nav small">
+        <a href="privacy.html">Privacy</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
 </html>
