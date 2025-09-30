@@ -293,3 +293,30 @@ body::after{
 .person figcaption{padding:12px 14px}
 .person h3{margin:0 0 4px;font-size:18px}
 .person p{margin:0;color:var(--muted);font-size:14px}
+
+/* === Balanced About-us layout (not too wide, not too narrow) === */
+@media (min-width: 900px){
+  /* Give the bios a touch more space, but keep the cards comfy */
+  .about-us{
+    grid-template-columns: 1fr 1.05fr;    /* was 0.8fr 1.2fr in the wide version */
+    align-items: start;
+  }
+  .about-copy{ max-width: 520px; }        /* keeps the paragraph line-length readable */
+
+  /* Limit how wide the two cards can expand */
+  .people-grid{
+    grid-template-columns: 1.1fr 1.1fr;
+    gap: 18px;
+    max-width: 800px;                     /* <-- adjust 680–760 to taste */
+  }
+
+  /* Portrait proportions & slightly larger type without going huge */
+  .person img{ aspect-ratio: 4 / 5; }
+  .person h3{ font-size: 19px; }
+  .person p { font-size: 14.5px; }
+}
+
+/* If you previously bumped the container to 1200px, nudge it back a bit */
+@media (min-width: 1200px){
+  .container{ max-width: 1120px; }
+}
