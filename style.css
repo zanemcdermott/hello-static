@@ -204,3 +204,10 @@ label{ display:block; margin:10px 0 }
 .nav a:focus-visible, .btn:focus-visible, .input:focus-visible, .textarea:focus-visible, select.input:focus-visible{
   outline-offset: 3px;
 }
+
+/* Plans: who it's for */
+.pc-who{
+  margin: 0 0 10px;
+  color: var(--muted);
+  font-size: 14px;
+}
