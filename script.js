@@ -97,6 +97,8 @@ document.querySelectorAll('.choose-plan').forEach(btn => {
       service.value = 'Managed service (ongoing)';
     }
 
+    window.plausible && plausible("Choose Plan", { props: { plan } });
+
     // Smooth scroll to the form
     const contact = document.getElementById('contact');
     if (contact) contact.scrollIntoView({ behavior: 'smooth', block: 'start' });
