@@ -161,3 +161,46 @@ label{ display:block; margin:10px 0 }
   .hero-copy h1{ font-size:36px; line-height:1.12 }
   .section{ padding:64px 0 }
 }
+/* FAQ accordion */
+.faq details{
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0;
+  margin: 10px 0;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+.faq summary{
+  list-style: none;
+  cursor: pointer;
+  font-weight: 700;
+  padding: 14px 16px;
+  position: relative;
+  outline: none;
+}
+.faq summary::-webkit-details-marker{ display: none; }
+.faq summary::after{
+  content: "▸";
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%) rotate(0deg);
+  transition: transform .2s ease;
+  color: var(--muted);
+}
+.faq details[open] summary::after{ transform: translateY(-50%) rotate(90deg); }
+.faq .answer{
+  padding: 0 16px 14px 16px;
+  color: var(--muted);
+}
+.faq .answer ul{ margin: 6px 0 0 18px; }
+
+:focus-visible{
+  outline: 3px solid rgba(37,99,235,.35);
+  outline-offset: 2px;
+  border-radius: 8px;
+}
+.nav a:focus-visible, .btn:focus-visible, .input:focus-visible, .textarea:focus-visible, select.input:focus-visible{
+  outline-offset: 3px;
+}

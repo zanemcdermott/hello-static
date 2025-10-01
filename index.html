@@ -23,6 +23,10 @@
   <script defer data-domain="zanemcdermott.github.io" src="https://plausible.io/js/script.js"></script>
 
   <link rel="stylesheet" href="style.css" />
+
+  <link rel="canonical" href="https://zanemcdermott.github.io/hello-static/">
+<meta name="theme-color" content="#2563eb">
+
 </head>
 <body>
   <!-- Header -->
@@ -221,13 +225,13 @@
 
           <div class="people-grid">
             <figure class="person card">
+              <img src="images/zane.jpg?v=2" alt="Zane — sites & funnels" loading="lazy">
+              <figcaption><h3>Zane</h3><p>Sites, funnels & client success</p></figcaption>
+            </figure>
+            
+            <figure class="person card">
               <img src="images/michael.jpg?v=2" alt="Michael — qualified sparky, ops & ads" loading="lazy">
               <figcaption><h3>Michael</h3><p>Qualified sparky • ops & ads</p></figcaption>
-            </figure>
-
-            <figure class="person card">
-              <img src="images/zane.jpg?v=2" alt="Zane — sites & funnels" loading="lazy">
-              <figcaption><h3>Zane McDermott</h3><p>Sites, funnels & client success</p></figcaption>
             </figure>
           </div>
         </div>
@@ -236,21 +240,51 @@
 
     <!-- FAQ -->
     <section id="faq" class="section">
-      <div class="container">
-        <h2 class="section-title">Why choose Sidekick Sites?</h2>
-        <div class="faq">
-          <details><summary>What exactly do you deliver?</summary>
-            <div class="answer">
-              <p>A fast, focused landing page with a frictionless contact flow wired to your inbox. We can add:</p>
-              <ul><li>Optional Airtable lead log</li><li>Paid social setup</li><li>Basic SEO & share cards</li></ul>
-            </div>
-          </details>
-          <details><summary>How fast can we launch?</summary><div class="answer"><p>Usually days, not weeks. We start simple, ship, and iterate.</p></div></details>
-          <details><summary>Do I own everything?</summary><div class="answer"><p>You own your data (leads, domains, ad accounts). We run a managed service on a monthly fee; if you ever want to take it in-house, we can hand over cleanly.</p></div></details>
+  <div class="container">
+    <h2 class="section-title">Why choose Sidekick Sites?</h2>
+
+    <div class="faq">
+      <details>
+        <summary>What exactly do you deliver?</summary>
+        <div class="answer">
+          <p>A fast, focused landing page with a frictionless contact flow wired to your inbox. We can add:</p>
+          <ul>
+            <li>Optional Airtable lead log</li>
+            <li>Paid social setup (Meta/IG; TikTok optional)</li>
+            <li>Basic SEO (titles, meta, share cards, sitemap)</li>
+          </ul>
         </div>
-        <div class="actions" style="margin-top:16px"><a class="btn btn-primary shine" href="#contact">Start a project</a></div>
-      </div>
-    </section>
+      </details>
+
+      <details>
+        <summary>How fast can we launch?</summary>
+        <div class="answer">
+          <p>Usually days, not weeks. We start simple, ship, and iterate. You send must-have copy/photos; we can use clean placeholders to go live quickly.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Do I own everything?</summary>
+        <div class="answer">
+          <p>You own your data (leads, domains, ad accounts). We run this as a <strong>managed monthly service</strong>; if you ever want to take it in-house, we hand over cleanly.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>How do we track leads & results?</summary>
+        <div class="answer">
+          <p>Email notifications immediately; optional Airtable dashboard with source (UTMs), page URL, and timestamps. For ads, we report weekly in plain English.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="actions" style="margin-top:16px">
+      <a class="btn btn-primary shine" href="#contact">Start a project</a>
+    </div>
+  </div>
+</section>
+
+
 
     <!-- Contact -->
     <section id="contact" class="section section-alt">
@@ -298,11 +332,15 @@
 
   <!-- Footer -->
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <small>© <span id="year"></span> Sidekick Sites</small>
+  <div class="container footer-inner">
+    <small>© <span id="year"></span> Sidekick Sites</small>
+    <div class="nav small">
+      <a href="mailto:zanemc@ymail.com">zanemc@ymail.com</a>
       <a href="./privacy.html" class="muted">Privacy</a>
     </div>
-  </footer>
+  </div>
+</footer>
+
 
   <script src="script.js"></script>
 </body>
