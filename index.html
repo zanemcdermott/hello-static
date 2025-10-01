@@ -1,451 +1,306 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Sidekick Sites — Simple sites & ads that get leads</title>
-  <meta name="description" content="No-fuss landing pages, contact funnels, and paid social ads. Sidekick Sites helps small businesses get more leads, fast.">
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <meta name="description" content="Launch fast. Contact forms that hit your inbox. Paid social that actually gets results." />
+
+  <!-- Open Graph / X -->
+  <meta property="og:title" content="Sidekick Sites — Simple sites & ads that get leads">
+  <meta property="og:description" content="Launch fast. Contact forms that hit your inbox. Paid social that actually gets results.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://zanemcdermott.github.io/hello-static/">
+  <meta property="og:image" content="https://zanemcdermott.github.io/hello-static/images/team.jpg?v=2025-10-01">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sidekick Sites — Simple sites & ads that get leads">
+  <meta name="twitter:description" content="Launch fast. Contact forms that hit your inbox. Paid social that actually gets results.">
+  <meta name="twitter:image" content="https://zanemcdermott.github.io/hello-static/images/team.jpg?v=2025-10-01">
+
+  <!-- Plausible -->
+  <script defer data-domain="zanemcdermott.github.io" src="https://plausible.io/js/script.js"></script>
+
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" type="image/svg+xml" href="images/logo.svg">
-  <link rel="apple-touch-icon" href="images/logo.svg">
-
-  <!-- Open Graph / social -->
-<meta property="og:title" content="Sidekick Sites — Simple sites & ads that get leads">
-<meta property="og:description" content="Launch fast. Contact forms that hit your inbox. Paid social that actually gets results.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://zanemcdermott.github.io/hello-static/">
-<meta property="og:image" content="https://zanemcdermott.github.io/hello-static/images/team.jpg?v=2025-10-01">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Sidekick Sites — Simple sites & ads that get leads">
-<meta name="twitter:description" content="Launch fast. Contact forms that hit your inbox. Paid social that actually gets results.">
-<meta name="twitter:image" content="https://zanemcdermott.github.io/hello-static/images/team.jpg?v=2025-10-01">
-
-<script defer data-domain="zanemcdermott.github.io" src="https://plausible.io/js/script.js"></script>
 </head>
 <body>
   <!-- Header -->
   <header class="site-header">
-    <div class="container">
-      <a class="brand" href="index.html" aria-label="Sidekick Sites home">
-        <!-- inline logo mark -->
-        <svg class="logo-mark" width="28" height="28" viewBox="0 0 64 64" aria-hidden="true">
+    <div class="container header-inner">
+      <a href="#top" class="brand" aria-label="Sidekick Sites">
+        <svg class="logo-mark" viewBox="0 0 64 64" width="28" height="28" aria-hidden="true">
           <defs>
             <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-              <stop stop-color="#2563eb" offset="0"/>
-              <stop stop-color="#7c3aed" offset="1"/>
+              <stop stop-color="#2563eb" offset="0"></stop>
+              <stop stop-color="#7c3aed" offset="1"></stop>
             </linearGradient>
           </defs>
-          <circle cx="32" cy="32" r="28" fill="url(#g)"/>
-          <!-- stylised S + cape -->
+          <circle cx="32" cy="32" r="28" fill="url(#g)"></circle>
           <path d="M41 18c-5-2-13-1-16 4-4 7 6 8 9 9 3 1 5 2 4 5-1 2-5 4-9 4-4 0-7-1-10-3"
-                fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
-          <path d="M40 30l10-4-4 10" fill="#fff" opacity=".85"/>
+                fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round"></path>
+          <path d="M40 30l10-4-4 10" fill="#fff" opacity=".85"></path>
         </svg>
-        <span class="brand-text">Sidekick Sites</span>
+        <span class="brand-text">Sidekick <strong>Sites</strong></span>
       </a>
+
       <nav class="nav">
         <a href="#services">Services</a>
-        <a href="#about">About Us</a>
+        <a href="#ads">Ads</a>
+        <a href="#plans">Plans</a>
+        <a href="#about">About us</a>
         <a href="#faq">FAQ</a>
-        <a href="#contact" class="btn btn-primary btn-sm">Start a project</a>
+        <a href="#contact" class="btn btn-small btn-primary">Get a quote</a>
       </nav>
     </div>
   </header>
 
   <!-- Hero -->
-  <section class="hero">
-    <div class="container hero-grid">
-      <div class="hero-copy">
-        <h1>Simple sites & ads that <span class="accent">get leads</span>.</h1>
-        <p class="lead">We build quick, conversion-focused pages and run no-nonsense paid social so your inbox fills and the phone rings.</p>
-        <div class="actions">
-          <a class="btn btn-primary shine" href="#contact">Get a quote</a>
-          <a class="btn btn-ghost" href="#services">What we do</a>
+  <main id="top">
+    <section class="hero section">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1>Simple sites & ads that <span class="accent">get leads</span>.</h1>
+          <p class="lead">We build quick, conversion-focused pages and run no-nonsense paid social so your inbox fills and the phone rings.</p>
+          <div class="actions">
+            <a class="btn btn-primary shine" href="#contact">Get a quote</a>
+            <a class="btn btn-ghost" href="#services">What we do</a>
+          </div>
         </div>
-        <ul class="bullets">
-          <li>Launch in days, not weeks</li>
-          <li>Form + email notifications, zero backend</li>
-          <li>Optional Airtable dashboard later</li>
-        </ul>
       </div>
-      <div class="hero-media">
-        <img src="https://images.unsplash.com/photo-1557800636-894a64c1696f?q=80&w=1600&auto=format&fit=crop"
-             alt="Clean marketing site on a laptop" loading="lazy">
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Services -->
-  <section id="services" class="section">
-    <div class="container">
-      <h2 class="section-title">Services</h2>
-      <div class="grid cards-4">
-        <article class="card">
-          <h3>Landing pages</h3>
-          <p>Focused, fast pages with clear copy and strong calls-to-action.</p>
-        </article>
-        <article class="card">
-          <h3>Contact funnels</h3>
-          <p>Frictionless forms, email alerts, optional CRM/Airtable logging.</p>
-        </article>
-        <article class="card">
-          <h3>Paid social ads</h3>
-          <p>Meta/Instagram (TikTok optional). Creative, budgets, weekly tweaks & reporting.</p>
-        </article>
-        <article class="card">
-          <h3>Speed & SEO basics</h3>
-          <p>Lightweight code, proper metadata, share cards and sitemaps.</p>
-        </article>
+    <!-- Services -->
+    <section id="services" class="section">
+      <div class="container">
+        <h2 class="section-title">What we build</h2>
+        <div class="grid cards-3">
+          <article class="card">
+            <h3>Landing pages</h3>
+            <p>Focused pages that make it easy to call, message, or request a quote.</p>
+          </article>
+          <article class="card">
+            <h3>Lead capture</h3>
+            <p>Frictionless forms wired to your inbox with optional Airtable logging.</p>
+          </article>
+          <article class="card">
+            <h3>Basic SEO</h3>
+            <p>Clean titles, meta and share cards so links look good and get found.</p>
+          </article>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-   <!-- Ads -->
+    <!-- Ads -->
     <section id="ads" class="section section-alt">
-  <div class="container">
-    <h2 class="section-title">Paid Social Ads</h2>
-    <div class="grid cards-3">
-      <article class="card">
-        <h3>Plan & setup</h3>
-        <p>Offer, targeting and budget plan. Pixel & tracking wired. Campaigns live within a few days.</p>
-      </article>
-      <article class="card">
-        <h3>Creative that fits</h3>
-        <p>Scroll-stopping image/video variations designed for your audience. We test and iterate quickly.</p>
-      </article>
-      <article class="card">
-        <h3>Weekly tweaks & report</h3>
-        <p>We review results, shift budget to winners, and send a one-page update in plain English.</p>
-      </article>
-    </div>
-    <div class="actions" style="margin-top:16px">
-      <a class="btn btn-primary shine" href="#contact">Get an ad plan</a>
-      <a class="btn btn-ghost" href="#services">See all services</a>
-    </div>
-  </div>
-</section>
-
-    <!--Plans-->
-<section id="plans" class="section">
-  <div class="container">
-    <h2 class="section-title">Plans that scale with you</h2>
-
-    <div class="pricing">
-      <!-- Starter -->
-      <article class="price-card">
-        <div class="pc-head">
-          <h3>Starter</h3>
-          <p class="pc-sub">Get live fast</p>
-          <div class="pc-price">AU$ <strong>490</strong> /mo</div>
+      <div class="container">
+        <h2 class="section-title">Paid Social Ads</h2>
+        <div class="grid cards-3">
+          <article class="card"><h3>Plan & setup</h3><p>Offer, targeting and budget plan. Pixel & tracking wired. Campaigns live within days.</p></article>
+          <article class="card"><h3>Creative that fits</h3><p>Scroll-stoppers designed for your audience. We test and iterate quickly.</p></article>
+          <article class="card"><h3>Weekly tweaks</h3><p>Shift budget to winners and send a one-page update in plain English.</p></article>
         </div>
-        <ul class="pc-list">
-          <li>1 landing page + contact flow</li>
-          <li>Email notifications, basic SEO</li>
-          <li>Light ad spend guidance</li>
-          <li>Support via email</li>
-        </ul>
-        <a href="#contact" class="btn btn-primary choose-plan" data-plan="Starter">Choose Starter</a>
-      </article>
-
-      <!-- Growth (highlight) -->
-      <article class="price-card featured">
-        <div class="pc-badge">Most popular</div>
-        <div class="pc-head">
-          <h3>Growth</h3>
-          <p class="pc-sub">Managed service</p>
-          <div class="pc-price">AU$ <strong>990</strong> /mo</div>
+        <div class="actions" style="margin-top:16px">
+          <a class="btn btn-primary shine" href="#contact">Get an ad plan</a>
         </div>
-        <ul class="pc-list">
-          <li>Pages + forms + tracking</li>
-          <li>Paid social setup & weekly tweaks</li>
-          <li>Simple weekly report</li>
-          <li>Priority support</li>
-        </ul>
-        <a href="#contact" class="btn btn-primary choose-plan" data-plan="Growth">Choose Growth</a>
-      </article>
+      </div>
+    </section>
 
-      <!-- Partner -->
-      <article class="price-card">
-        <div class="pc-head">
-          <h3>Partner</h3>
-          <p class="pc-sub">Scale & iterate</p>
-          <div class="pc-price">AU$ <strong>1,990</strong> /mo</div>
+    <!-- Plans -->
+    <section id="plans" class="section">
+      <div class="container">
+        <h2 class="section-title">Plans that scale with you</h2>
+
+        <div class="pricing">
+          <article class="price-card">
+            <div class="pc-head">
+              <h3>Starter</h3>
+              <p class="pc-sub">Get live fast</p>
+              <div class="pc-price">AU$ <strong>490</strong> /mo</div>
+            </div>
+            <ul class="pc-list">
+              <li>1 landing page + contact flow</li>
+              <li>Email notifications, basic SEO</li>
+              <li>Light ad spend guidance</li>
+              <li>Support via email</li>
+            </ul>
+            <a href="#contact" class="btn btn-primary choose-plan" data-plan="Starter">Choose Starter</a>
+          </article>
+
+          <article class="price-card featured">
+            <div class="pc-badge">Most popular</div>
+            <div class="pc-head">
+              <h3>Growth</h3>
+              <p class="pc-sub">Managed service</p>
+              <div class="pc-price">AU$ <strong>990</strong> /mo</div>
+            </div>
+            <ul class="pc-list">
+              <li>Pages + forms + tracking</li>
+              <li>Paid social setup & weekly tweaks</li>
+              <li>Simple weekly report</li>
+              <li>Priority support</li>
+            </ul>
+            <a href="#contact" class="btn btn-primary choose-plan" data-plan="Growth">Choose Growth</a>
+          </article>
+
+          <article class="price-card">
+            <div class="pc-head">
+              <h3>Partner</h3>
+              <p class="pc-sub">Scale & iterate</p>
+              <div class="pc-price">AU$ <strong>1,990</strong> /mo</div>
+            </div>
+            <ul class="pc-list">
+              <li>Everything in Growth</li>
+              <li>Creative testing (3–5 ads/mo)</li>
+              <li>Landing page experiments</li>
+              <li>Monthly strategy call</li>
+            </ul>
+            <a href="#contact" class="btn btn-primary choose-plan" data-plan="Partner">Choose Partner</a>
+          </article>
         </div>
-        <ul class="pc-list">
-          <li>Everything in Growth</li>
-          <li>Creative testing (3–5 ads/mo)</li>
-          <li>Landing page experiments</li>
-          <li>Monthly strategy call</li>
-        </ul>
-        <a href="#contact" class="btn btn-primary choose-plan" data-plan="Partner">Choose Partner</a>
-      </article>
-    </div>
 
-    <p class="muted" style="margin-top:10px">
-      Prices exclude ad spend. Month-to-month; cancel anytime. We’ll right-size this as we learn.
-    </p>
-  </div>
-</section>
-
-  <!-- About with photos -->
- <section id="about" class="section">
-  <div class="container">
-    <h2 class="section-title">About us</h2>
-
-    <!-- Duo banner -->
-    <figure class="duo card">
-      <img src="images/team.jpg" alt="Zane and Michael — Sidekick Sites" loading="lazy">
-      <figcaption class="duo-caption">
-        Your friendly sidekicks
-        <span class="chip">Sites & Funnels</span>
-        <span class="chip">Paid Social</span>
-        <span class="chip">Managed Service</span>
-      </figcaption>
-    </figure>
-
-    <div class="about-us">
-      <!-- Blurb -->
-      <div class="about-copy">
-        <p class="muted">
-          We’re Zane & Michael. We keep it simple: ship a clean, conversion-focused page,
-          wire it to your inbox, then run steady paid social to keep leads coming. It’s a
-          <strong>managed service</strong> on a straightforward monthly fee—no handovers, no hassle.
+        <p class="muted" style="margin-top:10px">
+          Prices exclude ad spend. Month-to-month; cancel anytime. We’ll right-size this as we learn.
         </p>
-        <ul class="checklist">
-          <li>Launch in days, iterate in weeks</li>
-          <li>Plain-English updates & weekly tweaks</li>
-          <li>Lead tracking you can actually read</li>
-        </ul>
-        <div class="actions" style="margin-top:14px">
-          <a href="#contact" class="btn btn-primary">Start a project</a>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">What clients say</h2>
+        <div class="t-grid">
+          <figure class="t-card">
+            <blockquote>“We were stuck on brochureware. Sidekick Sites shipped a clean page and the phone actually started ringing.”</blockquote>
+            <figcaption><strong>Bella Plumbing</strong><span>Owner</span></figcaption>
+          </figure>
+          <figure class="t-card">
+            <blockquote>“No jargon, just results. Weekly tweaks + simple report. Booking requests up 2× in a month.”</blockquote>
+            <figcaption><strong>Acme Landscapes</strong><span>Director</span></figcaption>
+          </figure>
+          <figure class="t-card">
+            <blockquote>“Quick launch, tidy design, and leads going to the right inboxes. Exactly what we needed.”</blockquote>
+            <figcaption><strong>Coastal Physio</strong><span>Practice Manager</span></figcaption>
+          </figure>
         </div>
       </div>
+    </section>
 
-      <!-- People -->
-      <div class="people-grid">
-        <figure class="person card">
-          <img src="images/zane.jpg" alt="Zane" loading="lazy">
-          <figcaption>
-            <h3>Zane</h3>
-            <p>Sites, funnels & client success</p>
+    <!-- About us -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title">About us</h2>
+
+        <!-- Duo banner -->
+        <figure class="duo card">
+          <img src="images/team.jpg?v=2" alt="Zane and Michael — Sidekick Sites" loading="lazy">
+          <figcaption class="duo-caption">
+            Your friendly sidekicks
+            <span class="chip">Sites & Funnels</span>
+            <span class="chip">Paid Social</span>
+            <span class="chip">Managed Service</span>
           </figcaption>
         </figure>
 
-        <figure class="person card">
-          <img src="images/michael.jpg" alt="Michael" loading="lazy">
-          <figcaption>
-            <h3>Michael</h3>
-            <p>Qualified sparky • ops & ads</p>
-          </figcaption>
-        </figure>
+        <div class="about-us">
+          <div class="about-copy">
+            <p class="muted">
+              We’re Zane & Michael. We keep it simple: ship a clean, conversion-focused page,
+              wire it to your inbox, then run steady paid social to keep leads coming.
+              It’s a <strong>managed service</strong> on a straightforward monthly fee—no handovers, no hassle.
+            </p>
+            <ul class="checklist">
+              <li>Launch in days, iterate in weeks</li>
+              <li>Plain-English updates & weekly tweaks</li>
+              <li>Lead tracking you can actually read</li>
+            </ul>
+            <div class="actions" style="margin-top:14px">
+              <a href="#contact" class="btn btn-primary">Start a project</a>
+            </div>
+          </div>
+
+          <div class="people-grid">
+            <figure class="person card">
+              <img src="images/michael.jpg?v=2" alt="Michael — qualified sparky, ops & ads" loading="lazy">
+              <figcaption><h3>Michael</h3><p>Qualified sparky • ops & ads</p></figcaption>
+            </figure>
+
+            <figure class="person card">
+              <img src="images/zane.jpg?v=2" alt="Zane — sites & funnels" loading="lazy">
+              <figcaption><h3>Zane McDermott</h3><p>Sites, funnels & client success</p></figcaption>
+            </figure>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
- <!-- Testimonials -->
-  <section id="work" class="section section-alt">
-    <div class="container">
-      <h2 class="section-title">Recent work</h2>
-      <div class="grid cards-3">
-        <article class="card card-outline"><h4>Bella Plumbing</h4><p>Local leads +52% in 30 days.</p></article>
-        <article class="card card-outline"><h4>Acme Landscapes</h4><p>Booking requests up 2.1×.</p></article>
-        <article class="card card-outline"><h4>Coastal Physio</h4><p>From brochureware to bookings.</p></article>
+    <!-- FAQ -->
+    <section id="faq" class="section">
+      <div class="container">
+        <h2 class="section-title">Why choose Sidekick Sites?</h2>
+        <div class="faq">
+          <details><summary>What exactly do you deliver?</summary>
+            <div class="answer">
+              <p>A fast, focused landing page with a frictionless contact flow wired to your inbox. We can add:</p>
+              <ul><li>Optional Airtable lead log</li><li>Paid social setup</li><li>Basic SEO & share cards</li></ul>
+            </div>
+          </details>
+          <details><summary>How fast can we launch?</summary><div class="answer"><p>Usually days, not weeks. We start simple, ship, and iterate.</p></div></details>
+          <details><summary>Do I own everything?</summary><div class="answer"><p>You own your data (leads, domains, ad accounts). We run a managed service on a monthly fee; if you ever want to take it in-house, we can hand over cleanly.</p></div></details>
+        </div>
+        <div class="actions" style="margin-top:16px"><a class="btn btn-primary shine" href="#contact">Start a project</a></div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="testimonials" class="section section-alt">
-  <div class="container">
-    <h2 class="section-title">What clients say</h2>
+    <!-- Contact -->
+    <section id="contact" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">Tell us about the job</h2>
 
-    <div class="t-grid">
-      <figure class="t-card">
-        <blockquote>“We were stuck on brochureware. Sidekick Sites shipped a clean page and the phone actually started ringing.”</blockquote>
-        <figcaption>
-          <strong>Bella Plumbing</strong>
-          <span>Owner</span>
-        </figcaption>
-      </figure>
+        <form id="lead-form" class="form card" action="https://formspree.io/f/mqayenbj" method="POST" data-thanks="thank-you.html">
+          <!-- visible fields -->
+          <label>Name <input class="input" id="name" name="name" autocomplete="name" required></label>
+          <label>Email <input class="input" id="email" name="email" type="email" autocomplete="email" required></label>
+          <label>Phone (optional) <input class="input" id="phone" name="phone" inputmode="tel" autocomplete="tel"></label>
+          <label>Service
+            <select class="input" id="service" name="service">
+              <option>Landing page / website</option>
+              <option>Managed service (ongoing)</option>
+              <option>Paid social ads</option>
+            </select>
+          </label>
+          <label>How are we able to assist you today?
+            <textarea class="textarea" id="message" name="message" rows="5" required></textarea>
+          </label>
 
-      <figure class="t-card">
-        <blockquote>“No jargon, just results. Weekly tweaks + simple report. Booking requests up 2× in a month.”</blockquote>
-        <figcaption>
-          <strong>Acme Landscapes</strong>
-          <span>Director</span>
-        </figcaption>
-      </figure>
+          <!-- privacy -->
+          <label class="checkbox">
+            <input type="checkbox" required>
+            <span>I agree to the <a href="./privacy.html">Privacy Policy</a>.</span>
+          </label>
 
-      <figure class="t-card">
-        <blockquote>“Quick launch, tidy design, and leads going to the right inboxes. Exactly what we needed.”</blockquote>
-        <figcaption>
-          <strong>Coastal Physio</strong>
-          <span>Practice Manager</span>
-        </figcaption>
-      </figure>
-    </div>
-  </div>
-</section>
-
-  
-  <!-- FAQ -->
-  <section id="faq" class="section">
-  <div class="container">
-    <h2 class="section-title">Why choose Sidekick Sites?</h2>
-
-    <div class="faq">
-      <details>
-        <summary>What do you do each month?</summary>
-        <div class="answer">
-          <ul>
-            <li>Keep your landing page fast, tidy and up to date</li>
-            <li>Manage paid social (Meta/Instagram; TikTok optional)</li>
-            <li>Test creatives/offers, shift budget to winners</li>
-            <li>Track leads (UTMs, page URL, timestamps) and inbox alerts</li>
-            <li>Send a plain-English weekly summary + monthly roll-up</li>
-          </ul>
-        </div>
-      </details>
-
-      <details>
-        <summary>Who owns what?</summary>
-        <div class="answer">
-          <p>You own your <strong>domain, brand assets, and ad accounts</strong>. We run everything for you.</p>
-          <p>We provide the site and creative templates on a <strong>managed license</strong> while you’re subscribed. Want to take the site with you later? There’s a simple <strong>buyout option</strong> for a full handover.</p>
-        </div>
-      </details>
-
-      <details>
-        <summary>How does billing work?</summary>
-        <div class="answer">
-          <p>One-time <strong>setup fee</strong> to launch; then a monthly <strong>management fee</strong>. Your ad spend is paid directly to the platforms (you keep control of budgets). We suggest a <strong>3-month minimum</strong> to get meaningful learnings, then month-to-month.</p>
-        </div>
-      </details>
-
-      <details>
-        <summary>What results should I expect?</summary>
-        <div class="answer">
-          <p>Our job is to <strong>increase qualified enquiries</strong>, not just clicks. We measure:</p>
-          <ul>
-            <li>Leads per week/month and lead source</li>
-            <li>Cost per lead from ads</li>
-            <li>Page contact-rate (visits → enquiries)</li>
-          </ul>
-          <p>We start lean, then iterate based on data.</p>
-        </div>
-      </details>
-
-      <details>
-        <summary>Do you outsource?</summary>
-        <div class="answer">
-          <p>We’re your <strong>single point of contact</strong>. If we bring in specialists (e.g., video editor), they work under our processes and quality bar. You’ll still get one clear plan and one invoice.</p>
-        </div>
-      </details>
-
-      <details>
-        <summary>Can I pause or cancel?</summary>
-        <div class="answer">
-          <p>Yes—after the initial term, it’s month-to-month. You can pause ads or the plan with <strong>14 days’ notice</strong>. If you want a full site handover, choose the <strong>buyout</strong> option.</p>
-        </div>
-      </details>
-    </div>
-
-    <div class="actions" style="margin-top:16px">
-      <a class="btn btn-primary shine" href="#contact">Start a managed plan</a>
-    </div>
-  </div>
-</section>
-
-
-
-  <!-- Contact (integrated) -->
-  <section id="contact" class="section">
-    <div class="container">
-      <div class="contact-grid">
-        <div>
-          <h2 class="section-title">Tell us what you need</h2>
-          <p class="muted">Quick form. Real response. We usually reply same day.</p>
-        </div>
-
-        <form id="lead-form" class="form" action="https://formspree.io/f/mqayenbj" method="POST">
-          <!-- Hidden metadata -->
-          <input type="hidden" name="client_id" value="sidekick-sites">
+          <!-- hidden metadata -->
           <input type="hidden" name="site_url" id="site_url">
-          <input type="hidden" name="page_title" id="page_title">
-          <input type="hidden" name="referrer" id="referrer">
+          <input type="hidden" name="plan" id="plan">
+
           <input type="hidden" name="utm_source" id="utm_source">
           <input type="hidden" name="utm_medium" id="utm_medium">
           <input type="hidden" name="utm_campaign" id="utm_campaign">
           <input type="hidden" name="utm_term" id="utm_term">
           <input type="hidden" name="utm_content" id="utm_content">
-          <input type="hidden" name="_subject" value="New website lead — Contact form">
-          <input type="text" name="_gotcha" style="display:none">
-          <input type="hidden" name="plan" id="plan">
 
-
-          <div class="row-2">
-            <div>
-              <label for="name">Name</label>
-              <input class="input" id="name" name="name" autocomplete="name" required />
-            </div>
-            <div>
-              <label for="email">Email</label>
-              <input class="input" id="email" name="email" type="email" autocomplete="email" required />
-            </div>
-          </div>
-
-          <div class="row-2">
-            <div>
-              <label for="phone">Phone</label>
-              <input class="input" id="phone" name="phone" type="tel" autocomplete="tel" pattern="^[0-9+()\\s-]{7,}$" placeholder="+61 412 345 678" />
-            </div>
-            <div>
-              <label for="service">Service</label>
-              <select class="input" id="service" name="service">
-                <option>Landing page</option>
-                <option>Contact funnel</option>
-                <option>Paid social ads</option>
-                <option>Speed & SEO basics</option>
-                <option>Managed service (ongoing)</option>
-                <option>Other</option>
-              </select>
-            </div>
-          </div>
-
-          <div>
-            <label for="message">What do you need help with?</label>
-            <textarea class="textarea" id="message" name="message" rows="4" placeholder="Landing page + contact flow; happy to start small and iterate." required></textarea>
-          </div>
-
-          <label class="consent">
-            <input type="checkbox" id="consent" name="consent" required>
-            <span>I agree to the <a href="privacy.html" target="_blank" rel="noopener">Privacy&nbsp;Policy</a>.</span>
-          </label>
-
-          <div class="actions">
-            <button class="btn btn-primary shine" type="submit">Send</button>
-          </div>
-
-          <p id="formFeedback" role="status" aria-live="polite" class="muted"></p>
+          <button class="btn btn-primary shine" type="submit">Send</button>
+          <p id="formFeedback" class="muted" role="status" aria-live="polite"></p>
         </form>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
   <!-- Footer -->
   <footer class="site-footer">
-    <div class="container footer-grid">
-      <p class="muted">© <span id="year"></span> Sidekick Sites</p>
-      <nav class="nav small">
-        <a href="privacy.html">Privacy</a>
-        <a href="#contact">Contact</a>
-      </nav>
+    <div class="container footer-inner">
+      <small>© <span id="year"></span> Sidekick Sites</small>
+      <a href="./privacy.html" class="muted">Privacy</a>
     </div>
   </footer>
 
