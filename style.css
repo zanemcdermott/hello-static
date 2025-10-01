@@ -250,3 +250,21 @@ label{ display:block; margin:10px 0 }
 .faq details[open] summary::after{ transform: translateY(-50%) rotate(90deg); }
 .faq .answer{ padding: 0 16px 14px 16px; color: var(--muted); }
 .faq .answer ul{ margin: 6px 0 0 18px; }
+
+/* Plans: line up the "Choose" buttons across cards */
+.pricing { align-items: stretch; }                /* make all cards equal height in the row */
+
+.price-card{
+  display: grid;                                  /* instead of flex for plan cards only */
+  grid-template-rows: auto 1fr auto;              /* head | flexible list | button */
+  height: 100%;
+}
+
+.price-card .pc-list{
+  margin: 0;                                      /* grid handles spacing; no auto margins */
+}
+
+.price-card .btn{
+  align-self: stretch;                            /* full width */
+  margin-top: 12px;                               /* small breathing room above */
+}
