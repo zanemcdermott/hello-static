@@ -211,3 +211,42 @@ label{ display:block; margin:10px 0 }
   color: var(--muted);
   font-size: 14px;
 }
+
+/* Icons in headings */
+.card h3{ display:flex; align-items:center; gap:8px; margin-top:4px; }
+.ico{ font-size:1.1em; line-height:1; }
+
+/* Plans: who it's for */
+.pc-who{ margin:0 0 10px; color:var(--muted); font-size:14px; }
+
+/* FAQ accordion (kept) */
+.faq details{
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0;
+  margin: 10px 0;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+.faq summary{
+  list-style: none;
+  cursor: pointer;
+  font-weight: 700;
+  padding: 14px 16px;
+  position: relative;
+  outline: none;
+}
+.faq summary::-webkit-details-marker{ display: none; }
+.faq summary::after{
+  content: "▸";
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%) rotate(0deg);
+  transition: transform .2s ease;
+  color: var(--muted);
+}
+.faq details[open] summary::after{ transform: translateY(-50%) rotate(90deg); }
+.faq .answer{ padding: 0 16px 14px 16px; color: var(--muted); }
+.faq .answer ul{ margin: 6px 0 0 18px; }
