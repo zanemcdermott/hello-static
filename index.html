@@ -10,6 +10,22 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+  <link rel="apple-touch-icon" href="images/logo.svg">
+
+  <!-- Open Graph / social -->
+<meta property="og:title" content="Sidekick Sites — Simple sites & ads that get leads">
+<meta property="og:description" content="Launch fast. Contact forms that hit your inbox. Paid social that actually gets results.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://zanemcdermott.github.io/hello-static/">
+<meta property="og:image" content="https://zanemcdermott.github.io/hello-static/images/team.jpg?v=2025-10-01">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sidekick Sites — Simple sites & ads that get leads">
+<meta name="twitter:description" content="Launch fast. Contact forms that hit your inbox. Paid social that actually gets results.">
+<meta name="twitter:image" content="https://zanemcdermott.github.io/hello-static/images/team.jpg?v=2025-10-01">
+
 </head>
 <body>
   <!-- Header -->
@@ -33,9 +49,7 @@
         <span class="brand-text">Sidekick Sites</span>
       </a>
       <nav class="nav">
-        <a href="#ads">Ads</a>
         <a href="#services">Services</a>
-        <a href="#work">Work</a>
         <a href="#about">About Us</a>
         <a href="#faq">FAQ</a>
         <a href="#contact" class="btn btn-primary btn-sm">Start a project</a>
@@ -66,31 +80,6 @@
     </div>
   </section>
 
-    <!-- Ads -->
-    <section id="ads" class="section section-alt">
-  <div class="container">
-    <h2 class="section-title">Paid Social Ads</h2>
-    <div class="grid cards-3">
-      <article class="card">
-        <h3>Plan & setup</h3>
-        <p>Offer, targeting and budget plan. Pixel & tracking wired. Campaigns live within a few days.</p>
-      </article>
-      <article class="card">
-        <h3>Creative that fits</h3>
-        <p>Scroll-stopping image/video variations designed for your audience. We test and iterate quickly.</p>
-      </article>
-      <article class="card">
-        <h3>Weekly tweaks & report</h3>
-        <p>We review results, shift budget to winners, and send a one-page update in plain English.</p>
-      </article>
-    </div>
-    <div class="actions" style="margin-top:16px">
-      <a class="btn btn-primary shine" href="#contact">Get an ad plan</a>
-      <a class="btn btn-ghost" href="#services">See all services</a>
-    </div>
-  </div>
-</section>
-
   <!-- Services -->
   <section id="services" class="section">
     <div class="container">
@@ -116,17 +105,92 @@
     </div>
   </section>
 
-  <!-- Work (placeholder) -->
-  <section id="work" class="section section-alt">
-    <div class="container">
-      <h2 class="section-title">Recent work</h2>
-      <div class="grid cards-3">
-        <article class="card card-outline"><h4>Bella Plumbing</h4><p>Local leads +52% in 30 days.</p></article>
-        <article class="card card-outline"><h4>Acme Landscapes</h4><p>Booking requests up 2.1×.</p></article>
-        <article class="card card-outline"><h4>Coastal Physio</h4><p>From brochureware to bookings.</p></article>
-      </div>
+   <!-- Ads -->
+    <section id="ads" class="section section-alt">
+  <div class="container">
+    <h2 class="section-title">Paid Social Ads</h2>
+    <div class="grid cards-3">
+      <article class="card">
+        <h3>Plan & setup</h3>
+        <p>Offer, targeting and budget plan. Pixel & tracking wired. Campaigns live within a few days.</p>
+      </article>
+      <article class="card">
+        <h3>Creative that fits</h3>
+        <p>Scroll-stopping image/video variations designed for your audience. We test and iterate quickly.</p>
+      </article>
+      <article class="card">
+        <h3>Weekly tweaks & report</h3>
+        <p>We review results, shift budget to winners, and send a one-page update in plain English.</p>
+      </article>
     </div>
-  </section>
+    <div class="actions" style="margin-top:16px">
+      <a class="btn btn-primary shine" href="#contact">Get an ad plan</a>
+      <a class="btn btn-ghost" href="#services">See all services</a>
+    </div>
+  </div>
+</section>
+
+    <!--Plans-->
+<section id="plans" class="section">
+  <div class="container">
+    <h2 class="section-title">Plans that scale with you</h2>
+
+    <div class="pricing">
+      <!-- Starter -->
+      <article class="price-card">
+        <div class="pc-head">
+          <h3>Starter</h3>
+          <p class="pc-sub">Get live fast</p>
+          <div class="pc-price">AU$ <strong>490</strong> /mo</div>
+        </div>
+        <ul class="pc-list">
+          <li>1 landing page + contact flow</li>
+          <li>Email notifications, basic SEO</li>
+          <li>Light ad spend guidance</li>
+          <li>Support via email</li>
+        </ul>
+        <a href="#contact" class="btn btn-primary choose-plan" data-plan="Starter">Choose Starter</a>
+      </article>
+
+      <!-- Growth (highlight) -->
+      <article class="price-card featured">
+        <div class="pc-badge">Most popular</div>
+        <div class="pc-head">
+          <h3>Growth</h3>
+          <p class="pc-sub">Managed service</p>
+          <div class="pc-price">AU$ <strong>990</strong> /mo</div>
+        </div>
+        <ul class="pc-list">
+          <li>Pages + forms + tracking</li>
+          <li>Paid social setup & weekly tweaks</li>
+          <li>Simple weekly report</li>
+          <li>Priority support</li>
+        </ul>
+        <a href="#contact" class="btn btn-primary choose-plan" data-plan="Growth">Choose Growth</a>
+      </article>
+
+      <!-- Partner -->
+      <article class="price-card">
+        <div class="pc-head">
+          <h3>Partner</h3>
+          <p class="pc-sub">Scale & iterate</p>
+          <div class="pc-price">AU$ <strong>1,990</strong> /mo</div>
+        </div>
+        <ul class="pc-list">
+          <li>Everything in Growth</li>
+          <li>Creative testing (3–5 ads/mo)</li>
+          <li>Landing page experiments</li>
+          <li>Monthly strategy call</li>
+        </ul>
+        <a href="#contact" class="btn btn-primary choose-plan" data-plan="Partner">Choose Partner</a>
+      </article>
+    </div>
+
+    <p class="muted" style="margin-top:10px">
+      Prices exclude ad spend. Month-to-month; cancel anytime. We’ll right-size this as we learn.
+    </p>
+  </div>
+</section>
 
   <!-- About with photos -->
  <section id="about" class="section">
@@ -184,6 +248,49 @@
   </div>
 </section>
 
+ <!-- Testimonials -->
+  <section id="work" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Recent work</h2>
+      <div class="grid cards-3">
+        <article class="card card-outline"><h4>Bella Plumbing</h4><p>Local leads +52% in 30 days.</p></article>
+        <article class="card card-outline"><h4>Acme Landscapes</h4><p>Booking requests up 2.1×.</p></article>
+        <article class="card card-outline"><h4>Coastal Physio</h4><p>From brochureware to bookings.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials" class="section section-alt">
+  <div class="container">
+    <h2 class="section-title">What clients say</h2>
+
+    <div class="t-grid">
+      <figure class="t-card">
+        <blockquote>“We were stuck on brochureware. Sidekick Sites shipped a clean page and the phone actually started ringing.”</blockquote>
+        <figcaption>
+          <strong>Bella Plumbing</strong>
+          <span>Owner</span>
+        </figcaption>
+      </figure>
+
+      <figure class="t-card">
+        <blockquote>“No jargon, just results. Weekly tweaks + simple report. Booking requests up 2× in a month.”</blockquote>
+        <figcaption>
+          <strong>Acme Landscapes</strong>
+          <span>Director</span>
+        </figcaption>
+      </figure>
+
+      <figure class="t-card">
+        <blockquote>“Quick launch, tidy design, and leads going to the right inboxes. Exactly what we needed.”</blockquote>
+        <figcaption>
+          <strong>Coastal Physio</strong>
+          <span>Practice Manager</span>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
 
   
   <!-- FAQ -->
@@ -278,6 +385,8 @@
           <input type="hidden" name="utm_content" id="utm_content">
           <input type="hidden" name="_subject" value="New website lead — Contact form">
           <input type="text" name="_gotcha" style="display:none">
+          <input type="hidden" name="plan" id="plan">
+
 
           <div class="row-2">
             <div>
@@ -302,6 +411,7 @@
                 <option>Contact funnel</option>
                 <option>Paid social ads</option>
                 <option>Speed & SEO basics</option>
+                <option>Managed service (ongoing)</option>
                 <option>Other</option>
               </select>
             </div>

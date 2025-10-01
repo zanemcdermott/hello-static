@@ -83,3 +83,28 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+// Prefill plan + service, then scroll to contact
+document.querySelectorAll('.choose-plan').forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    const plan = btn.dataset.plan;
+    const planField = document.getElementById('plan');
+    if (planField) planField.value = plan;
+
+    const service = document.getElementById('service');
+    if (service) {
+      // default to the retainer path; tweak if you prefer per-plan mapping
+      service.value = 'Managed service (ongoing)';
+    }
+
+    // Smooth scroll to the form
+    const contact = document.getElementById('contact');
+    if (contact) contact.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+    // Optional: small visual cue
+    setTimeout(() => {
+      const name = document.getElementById('name');
+      name && name.focus();
+    }, 500);
+  });
+});
