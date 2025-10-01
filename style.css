@@ -373,3 +373,48 @@ body::after{
 .t-card figcaption{display:flex;flex-direction:column;gap:2px}
 .t-card strong{font-weight:700}
 .t-card span{color:var(--muted);font-size:14px}
+
+/* === Surgical Polish Pack v2 === */
+
+/* A) Anchors: don't hide under sticky header */
+.section { scroll-margin-top: 84px; } /* header ≈64px + buffer */
+
+/* B) Tighter hero + better rhythm */
+.hero { padding: 96px 0 56px; }
+.hero-copy { max-width: 600px; } /* shorter lines without feeling narrow */
+.lead { margin-bottom: 14px; }
+
+/* C) Stronger section separation without heavy boxes */
+.section + .section { border-top: 1px solid var(--border-strong); }
+
+/* D) Nav: subtle pill hover + active state */
+.nav a { padding: 6px 10px; border-radius: 10px; }
+.nav a:hover, .nav a.active { background: rgba(37,99,235,.10); color: var(--brand); }
+
+/* E) Cards + forms: consistent height + inner spacing */
+.card, .price-card, .form { display: flex; flex-direction: column; }
+.pc-list { margin-bottom: auto; }   /* pushes CTA to bottom on pricing */
+.card h3, .price-card h3 { margin-top: 4px; }
+
+/* F) People cards: make portraits feel larger & bolder without blowing layout */
+@media (min-width: 900px){
+  .about-us{ grid-template-columns: 1.05fr 1.1fr; } /* gentle nudge wider */
+  .people-grid{ max-width: 760px; }                 /* balance */
+}
+.person img{ aspect-ratio: 4 / 5; border-bottom: 1px solid var(--border); }
+.person h3{ font-size: 19px; }
+.person p { font-size: 14.5px; color: var(--muted); }
+
+/* G) Testimonials: bigger quote, nicer spacing */
+.t-card blockquote{ font-size: 17px; line-height: 1.65; }
+.t-card { padding: 20px; }
+
+/* H) Buttons: tiny lift on hover, unify radius */
+.btn { border-radius: 12px; }
+.btn-primary:hover { transform: translateY(-1px); }
+
+/* I) Mobile niceties */
+@media (max-width: 640px){
+  .hero-copy h1{ font-size: 36px; line-height: 1.12; }
+  .section{ padding: 64px 0; }
+}

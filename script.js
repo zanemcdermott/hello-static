@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", () => {
         document.querySelector(id).scrollIntoView({behavior:"smooth", block:"start"});
       }
     });
-  });
 
   // Footer year
   const y = document.getElementById("year"); if (y) y.textContent = new Date().getFullYear();
@@ -110,3 +109,27 @@ document.querySelectorAll('.choose-plan').forEach(btn => {
     }, 500);
   });
 });
+
+  // Active nav highlight on scroll
+  const navLinks = Array.from(document.querySelectorAll('.nav a[href^="#"]'));
+  const sections = navLinks
+    .map(a => document.querySelector(a.getAttribute('href')))
+    .filter(Boolean);
+
+  if (sections.length && 'IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        const id = '#' + entry.target.id;
+        const link = navLinks.find(a => a.getAttribute('href') === id);
+        if (!link) return;
+        if (entry.isIntersecting) {
+          navLinks.forEach(a => a.classList.remove('active'));
+          link.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-50% 0px -45% 0px', threshold: 0 });
+
+    sections.forEach(sec => io.observe(sec));
+  }
+}); 
+
