@@ -23,34 +23,25 @@
   <script defer data-domain="zanemcdermott.github.io" src="https://plausible.io/js/script.js"></script>
 
   <link rel="stylesheet" href="style.css" />
+  <link rel="prefetch" href="thank-you.html" as="document">
 </head>
 <body>
   <!-- Header -->
   <header class="site-header">
     <div class="container header-inner">
       <a href="#top" class="brand" aria-label="Sidekick Sites">
-        <svg class="logo-mark" viewBox="0 0 64 64" width="28" height="28" aria-hidden="true">
-          <defs>
-            <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-              <stop stop-color="#2563eb" offset="0"></stop>
-              <stop stop-color="#7c3aed" offset="1"></stop>
-            </linearGradient>
-          </defs>
-          <circle cx="32" cy="32" r="28" fill="url(#g)"></circle>
-          <path d="M41 18c-5-2-13-1-16 4-4 7 6 8 9 9 3 1 5 2 4 5-1 2-5 4-9 4-4 0-7-1-10-3"
-                fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round"></path>
-          <path d="M40 30l10-4-4 10" fill="#fff" opacity=".85"></path>
-        </svg>
-        <span class="brand-text">Sidekick <strong>Sites</strong></span>
+        <img class="logo-mark" src="images/logo-mark.png" alt="Sidekick Sites logo" width="36" height="36" />
+        <span class="brand-text"><span>Sidekick</span><span>Sites</span></span>
       </a>
 
       <nav class="nav">
-        <a href="#services">Services</a>
-        <a href="#ads">Ads</a>
-        <a href="#plans">Plans</a>
-        <a href="#about">About us</a>
-        <a href="#faq">FAQ</a>
-        <a href="#contact" class="btn btn-small btn-primary">Get a quote</a>
+        <a href="./index.html#work">Work</a>
+        <a href="./index.html#capabilities">Capabilities</a>
+        <a href="./index.html#process">Process</a>
+        <a href="./index.html#plans">Plans</a>
+        <a href="./index.html#about">About</a>
+        <a href="./index.html#faq">FAQ</a>
+        <a href="#contact" class="btn btn-small btn-primary">Book intro call</a>
       </nav>
     </div>
   </header>
@@ -269,13 +260,22 @@
               <option>Paid social ads</option>
             </select>
           </label>
+          <label>Monthly budget (ads/website)
+            <select class="input" id="budget" name="budget">
+              <option value="under-1k">Under $1k</option>
+              <option value="1-2k">$1k – $2k</option>
+              <option value="2-5k">$2k – $5k</option>
+              <option value="over-5k">$5k+</option>
+              <option value="not-sure">Not sure yet</option>
+            </select>
+          </label>
           <label>How are we able to assist you today?
             <textarea class="textarea" id="message" name="message" rows="5" required></textarea>
           </label>
 
           <!-- privacy -->
           <label class="checkbox">
-            <input type="checkbox" required>
+            <input type="checkbox" name="privacy" value="accepted" required>
             <span>I agree to the <a href="./privacy.html">Privacy Policy</a>.</span>
           </label>
 
@@ -295,6 +295,14 @@
       </div>
     </section>
   </main>
+
+  <div class="mobile-cta" role="complementary">
+    <div class="mobile-cta__copy">
+      <strong>Need a hand?</strong>
+      <span>Book a 15-minute intro call</span>
+    </div>
+    <a class="btn btn-primary" href="#contact">Book now</a>
+  </div>
 
   <!-- Footer -->
   <footer class="site-footer">

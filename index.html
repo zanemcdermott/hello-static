@@ -3,136 +3,299 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Sidekick Sites — Website design & simple ads that bring enquiries</title>
-  <meta name="description" content="We set up a clean website and run Facebook/Instagram ads so people call, message, or request a quote—without you lifting a finger." />
+  <title>Sidekick Sites — Launch-ready sites & managed ads for service businesses</title>
+  <meta name="description" content="Conversion-first websites, Facebook/Instagram ads, and ongoing optimisation for service businesses. Launch fast and keep enquiries flowing." />
   <link rel="canonical" href="https://zanemcdermott.github.io/hello-static/">
-  <meta name="theme-color" content="#2563eb">
+  <meta name="theme-color" content="#0f172a">
 
   <!-- Open Graph / X -->
-  <meta property="og:title" content="Sidekick Sites — Website design & simple ads that bring enquiries">
-  <meta property="og:description" content="Clean website + Facebook/Instagram ads that bring you enquiries.">
+  <meta property="og:title" content="Sidekick Sites — Launch-ready sites & managed ads for service businesses">
+  <meta property="og:description" content="We build the site, wire the contact flows, run Facebook/Instagram ads, and iterate weekly so enquiries keep coming." />
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://zanemcdermott.github.io/hello-static/">
   <meta property="og:image" content="https://zanemcdermott.github.io/hello-static/images/team.jpg?v=2025-10-01">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Sidekick Sites — Website design & simple ads that bring enquiries">
-  <meta name="twitter:description" content="Clean website + Facebook/Instagram ads that bring you enquiries.">
+  <meta name="twitter:title" content="Sidekick Sites — Launch-ready sites & managed ads for service businesses">
+  <meta name="twitter:description" content="Conversion-first websites, Facebook/Instagram ads, and ongoing optimisation for service businesses.">
   <meta name="twitter:image" content="https://zanemcdermott.github.io/hello-static/images/team.jpg?v=2025-10-01">
 
   <!-- Plausible -->
   <script defer data-domain="zanemcdermott.github.io" src="https://plausible.io/js/script.js"></script>
 
   <link rel="stylesheet" href="style.css" />
+  <link rel="prefetch" href="thank-you.html" as="document">
 </head>
 <body>
-  <!-- Header -->
   <header class="site-header">
     <div class="container header-inner">
       <a href="#top" class="brand" aria-label="Sidekick Sites">
-        <svg class="logo-mark" viewBox="0 0 64 64" width="28" height="28" aria-hidden="true">
-          <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#2563eb" offset="0"/><stop stop-color="#7c3aed" offset="1"/></linearGradient></defs>
-          <circle cx="32" cy="32" r="28" fill="url(#g)" />
-          <path d="M41 18c-5-2-13-1-16 4-4 7 6 8 9 9 3 1 5 2 4 5-1 2-5 4-9 4-4 0-7-1-10-3" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
-          <path d="M40 30l10-4-4 10" fill="#fff" opacity=".85"/>
-        </svg>
-        <span class="brand-text">Sidekick <strong>Sites</strong></span>
+        <img class="logo-mark" src="images/logo-mark.png" alt="Sidekick Sites logo" width="36" height="36" />
+        <span class="brand-text"><span>Sidekick</span><span>Sites</span></span>
       </a>
 
       <nav class="nav">
-        <a href="#services">Services</a>
-        <a href="#ads">Facebook/IG ads</a>
-        <a href="#how">How it works</a>
+        <a href="#work">Work</a>
+        <a href="#capabilities">Capabilities</a>
+        <a href="#process">Process</a>
         <a href="#plans">Plans</a>
-        <a href="#about">About us</a>
+        <a href="#about">About</a>
         <a href="#faq">FAQ</a>
-        <a href="#contact" class="btn btn-small btn-primary">Get a quick quote</a>
+        <a href="#contact" class="btn btn-small btn-primary">Book intro call</a>
       </nav>
     </div>
   </header>
 
-  <!-- Hero -->
   <main id="top">
-    <section class="hero section">
-      <div class="container hero-inner">
-        <div class="hero-copy">
-          <h1>Website design & simple ads that bring you enquiries</h1>
-          <p class="lead">We set up a clean website and run Facebook/Instagram ads so people call, message, or request a quote—without you lifting a finger.</p>
-          <div class="actions">
-            <a class="btn btn-primary shine" href="#contact">Get a quick quote</a>
-            <a class="btn btn-ghost" href="#services">See what we do</a>
+    <section class="hero" id="hero">
+      <div class="hero-bg">
+        <div class="hero-orb hero-orb--one"></div>
+        <div class="hero-orb hero-orb--two"></div>
+        <div class="hero-gridlines"></div>
+      </div>
+
+      <div class="container hero-layout">
+        <div class="hero-content">
+          <span class="hero-kicker">Launch-ready websites + managed ads</span>
+          <h1>Conversion-first sites & performance ads for service businesses</h1>
+          <p class="hero-lead">We design the site, wire the contact flows, run Facebook/Instagram ads, and iterate weekly so your enquiries keep climbing.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary shine" href="#contact">Book a 15-minute intro</a>
+            <a class="btn btn-ghost" href="#work">See a launch</a>
+          </div>
+          <div class="hero-metrics">
+            <div class="metric">
+              <span class="metric-value" data-count="14">14</span>
+              <span class="metric-label">day average launch</span>
+            </div>
+            <div class="metric">
+              <span class="metric-value" data-count="2.1">2.1×</span>
+              <span class="metric-label">lift in enquiries</span>
+            </div>
+            <div class="metric">
+              <span class="metric-value" data-count="48">48</span>
+              <span class="metric-label">touchpoints managed each week</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual" data-laptop>
+          <div class="laptop">
+            <img src="images/hero-laptop-closed.png" alt="Closed laptop" class="laptop-closed" loading="eager">
+            <div class="laptop-open">
+              <img src="images/hero-laptop-open.png" alt="Open laptop" class="laptop-open-img" loading="lazy">
+              <div class="laptop-screen">
+                <div class="screen-track">
+                  <img src="images/white-lotus.5.png" alt="White Lotus hero" loading="lazy">
+                  <img src="images/white-lotus.1.png" alt="White Lotus services" loading="lazy">
+                  <img src="images/white-lotus.2.png" alt="White Lotus service detail" loading="lazy">
+                  <img src="images/white-lotus.3.png" alt="White Lotus before and after" loading="lazy">
+                  <img src="images/white-lotus.4.png" alt="White Lotus featured work" loading="lazy">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="hero-badge hero-badge--ads">Managed weekly optimisation</div>
+          <div class="hero-badge hero-badge--report">Plain-English reporting</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="outcomes" class="section section-tight outcomes">
+      <div class="container outcomes-grid">
+        <article class="outcome">
+          <span class="pill">Speed</span>
+          <h3>Launch in <strong>14 days</strong></h3>
+          <p>Brief on Monday, live the following fortnight with tracking, domain, and copy handled.</p>
+        </article>
+        <article class="outcome">
+          <span class="pill">Performance</span>
+          <h3>Avg <strong>2.1× enquiry lift</strong></h3>
+          <p>Conversion-first layout, compelling offers, and weekly ad tweaks keep the pipeline moving.</p>
+        </article>
+        <article class="outcome">
+          <span class="pill">Upkeep</span>
+          <h3><strong>All-inclusive retainer</strong></h3>
+          <p>Website, ads, reporting, and tracking in one managed service—no juggling freelancers again.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="capabilities" class="section capabilities">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title">Everything you need to capture and convert</h2>
+          <p class="muted">From the first impression to the follow-up, we build the entire journey and keep it tuned.</p>
+        </div>
+        <div class="capability-grid">
+          <article class="capability-card">
+            <header>
+              <span class="pill">01</span>
+              <h3>Website launch package</h3>
+            </header>
+            <p>Brand-aligned landing experience, conversion copy, and forms wired to your inbox and CRM.</p>
+            <ul>
+              <li>Responsive, conversion-first layout</li>
+              <li>SEO basics + social share cards</li>
+              <li>Booking/contact flows with alerts</li>
+            </ul>
+          </article>
+          <article class="capability-card">
+            <header>
+              <span class="pill">02</span>
+              <h3>Paid social acquisition</h3>
+            </header>
+            <p>Meta campaigns planned, built, and optimised so your calendar fills without guessing.</p>
+            <ul>
+              <li>Offer & targeting framework</li>
+              <li>Creative production & testing</li>
+              <li>Weekly optimisation & budget shifts</li>
+            </ul>
+          </article>
+          <article class="capability-card">
+            <header>
+              <span class="pill">03</span>
+              <h3>Ops & reporting layer</h3>
+            </header>
+            <p>We join the dots: Airtable/Sheets tracking, SMS/email routing, and dashboards in plain English.</p>
+            <ul>
+              <li>Lead routing + attribution logging</li>
+              <li>Weekly performance snapshot</li>
+              <li>Quarterly optimisation roadmap</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="process" class="section process">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title">Build fast, iterate forever</h2>
+          <p class="muted">A managed rhythm that keeps the site fresh, the ads efficient, and the enquiries flowing.</p>
+        </div>
+        <div class="process-timeline">
+          <article class="process-step">
+            <span class="process-step__index">Week 1</span>
+            <h3>Scope & positioning workshop</h3>
+            <p>45-minute kickoff to gather offers, proof, and audience insights. We map the conversion journey and ad angles.</p>
+          </article>
+          <article class="process-step">
+            <span class="process-step__index">Week 2</span>
+            <h3>Design, build & tracking setup</h3>
+            <p>We ship the site, integrate forms, configure analytics/UTMs, and prepare ad creative. Review links land in your inbox.</p>
+          </article>
+          <article class="process-step">
+            <span class="process-step__index">Weekly</span>
+            <h3>Launch, optimise, report</h3>
+            <p>Ads go live, we tune budgets and creative, log leads, and send a clear weekly update with next moves.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" class="section work">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title">Recent launch: White Lotus Landscaping</h2>
+          <p class="muted">Full-site refresh, lead routing, and managed ads that turned a local operator into a booked-out crew.</p>
+        </div>
+        <div class="work-spotlight">
+          <aside class="work-stats">
+            <div class="work-stat">
+              <span class="work-stat__label">Launch timeline</span>
+              <span class="work-stat__value">12 days</span>
+              <span class="work-stat__meta">from kickoff to live</span>
+            </div>
+            <div class="work-stat">
+              <span class="work-stat__label">Enquiries</span>
+              <span class="work-stat__value">+31</span>
+              <span class="work-stat__meta">first 30 days</span>
+            </div>
+            <div class="work-stat">
+              <span class="work-stat__label">Ad cost per lead</span>
+              <span class="work-stat__value">↓38%</span>
+              <span class="work-stat__meta">versus previous campaign</span>
+            </div>
+            <ul class="work-list">
+              <li>Website & positioning refresh</li>
+              <li>Service-specific landing sections</li>
+              <li>Airtable + SMS lead routing</li>
+              <li>Meta campaign with remarketing</li>
+            </ul>
+            <a class="btn btn-ghost" href="#contact">Plan my launch</a>
+          </aside>
+          <div class="work-preview" aria-hidden="true">
+            <div class="work-laptop" data-laptop-preview>
+              <div class="work-screen">
+                <div class="work-screen-track">
+                  <img src="images/white-lotus.4.png" alt="White Lotus featured work" loading="lazy" style="--delay:20s">
+                  <img src="images/white-lotus.1.png" alt="White Lotus services" loading="lazy">
+                  <img src="images/white-lotus.2.png" alt="White Lotus service detail" loading="lazy">
+                  <img src="images/white-lotus.3.png" alt="White Lotus before and after" loading="lazy">
+                  <img src="images/white-lotus.5.png" alt="White Lotus hero" loading="lazy">
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Services -->
-    <section id="services" class="section">
-      <div class="container">
-        <h2 class="section-title">What we build</h2>
-        <div class="grid cards-3">
+    <section id="insights" class="section section-alt insights">
+      <div class="container insights-layout">
+        <div class="insights-copy">
+          <h2 class="section-title">Playbooks & quick wins</h2>
+          <p class="muted">A peek at the frameworks we rely on when launching sites and running ads for service businesses. Grab the checklist and steal what you need.</p>
+          <ul class="checklist insights-list">
+            <li>15-step launch checklist (domain → ads)</li>
+            <li>Offer grid: hook, proof, follow-up</li>
+            <li>Meta campaign template (save as your own)</li>
+          </ul>
+          <div class="actions">
+            <button class="btn btn-primary shine" type="button" data-checklist>Email me the checklist</button>
+          </div>
+        </div>
+        <div class="insights-cards">
           <article class="card">
-            <h3><span class="ico" aria-hidden="true">🌐</span>Website design</h3>
-            <p>A clean one-page site that makes it easy to call, message, or request a quote.</p>
+            <h3>Local service offer grid</h3>
+            <p>Positioning, proof, and quote flows that convert cold traffic into enquiries.</p>
+            <span class="chip">5 min read</span>
           </article>
           <article class="card">
-            <h3><span class="ico" aria-hidden="true">✉️</span>Contact form to your inbox</h3>
-            <p>Every enquiry sent straight to your email. Optional Airtable log so nothing gets lost.</p>
+            <h3>Meta campaign blueprint</h3>
+            <p>Top/middle/bottom-funnel structure that works across trades, health, and home services.</p>
+            <span class="chip">Downloadable</span>
           </article>
           <article class="card">
-            <h3><span class="ico" aria-hidden="true">🔍</span>Get found on Google (basics)</h3>
-            <p>Titles, descriptions, share cards + Google Business help so locals can find you.</p>
+            <h3>Lead routing recipe</h3>
+            <p>How we wire inbox, SMS, and Airtable so follow-up never slips.</p>
+            <span class="chip">Automation</span>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- Ads -->
-    <section id="ads" class="section section-alt">
+    <section id="plans" class="section plans">
       <div class="container">
-        <h2 class="section-title">Facebook & Instagram ads</h2>
-        <div class="grid cards-3">
-          <article class="card"><h3>Set up right</h3><p>We plan your offer, set the targeting, and wire up tracking. Campaigns live within days.</p></article>
-          <article class="card"><h3>Ad pictures & videos</h3><p>Simple, scroll-stopping creatives matched to your audience. We test and improve.</p></article>
-          <article class="card"><h3>Weekly tune-ups</h3><p>We shift budget to winners and send a one-page update in plain English.</p></article>
+        <div class="section-head">
+          <h2 class="section-title">Choose how we partner</h2>
+          <p class="muted">All packages include website, ads, tracking, and weekly optimisation. Pick the cadence that matches your goals.</p>
         </div>
-        <div class="actions" style="margin-top:16px">
-          <a class="btn btn-primary shine" href="#contact">Get a quick quote</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- How it works -->
-    <section id="how" class="section section-alt">
-      <div class="container">
-        <h2 class="section-title">How it works</h2>
-        <div class="grid cards-3">
-          <article class="card"><h3>1) Quick chat</h3><p>Tell us what you do and how you want people to contact you. 15 minutes.</p></article>
-          <article class="card"><h3>2) Build the website</h3><p>We write tidy copy, add your photos, and wire the contact form to your inbox.</p></article>
-          <article class="card"><h3>3) Switch on ads</h3><p>We run Facebook/Instagram ads and send a weekly update with results.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Plans -->
-    <section id="plans" class="section">
-      <div class="container">
-        <h2 class="section-title">Plans that scale with you</h2>
-
         <div class="pricing">
           <article class="price-card">
             <div class="pc-head">
               <h3>Starter</h3>
-              <p class="pc-sub">Get live fast</p>
-              <p class="pc-who">Best for first site / early enquiries</p>
+              <p class="pc-sub">Launch quickly</p>
+              <p class="pc-who">Great for first site / testing waters</p>
               <div class="pc-price">AU$ <strong>490</strong> /mo</div>
             </div>
             <ul class="pc-list">
-              <li>1-page website + contact flow</li>
-              <li>Email notifications, basic SEO</li>
-              <li>Light ad spend guidance</li>
-              <li>Support via email</li>
+              <li>Single-page site + contact flow</li>
+              <li>Email & SMS lead alerts</li>
+              <li>Monthly optimisation block</li>
+              <li>Email support</li>
             </ul>
             <a href="#contact" class="btn btn-primary choose-plan" data-plan="Starter">Choose Starter</a>
           </article>
@@ -142,14 +305,14 @@
             <div class="pc-head">
               <h3>Growth</h3>
               <p class="pc-sub">Managed service</p>
-              <p class="pc-who">Best for steady leads (1–5 staff)</p>
+              <p class="pc-who">Designed for steady lead flow</p>
               <div class="pc-price">AU$ <strong>990</strong> /mo</div>
             </div>
             <ul class="pc-list">
-              <li>Pages + forms + tracking</li>
-              <li>Facebook/Instagram setup & weekly tweaks</li>
-              <li>Simple weekly report</li>
-              <li>Priority support</li>
+              <li>Multi-section site + landing variants</li>
+              <li>Meta campaign setup & weekly tweaks</li>
+              <li>Weekly performance snapshot</li>
+              <li>Priority support & backlog</li>
             </ul>
             <a href="#contact" class="btn btn-primary choose-plan" data-plan="Growth">Choose Growth</a>
           </article>
@@ -157,78 +320,59 @@
           <article class="price-card">
             <div class="pc-head">
               <h3>Partner</h3>
-              <p class="pc-sub">Scale & iterate</p>
-              <p class="pc-who">Best for increasing ad spend / testing offers</p>
+              <p class="pc-sub">Scale & test</p>
+              <p class="pc-who">For aggressive growth & new offers</p>
               <div class="pc-price">AU$ <strong>1,990</strong> /mo</div>
             </div>
             <ul class="pc-list">
               <li>Everything in Growth</li>
               <li>Creative testing (3–5 ads/mo)</li>
               <li>Landing page experiments</li>
-              <li>Monthly strategy call</li>
+              <li>Monthly strategy + roadmap</li>
             </ul>
             <a href="#contact" class="btn btn-primary choose-plan" data-plan="Partner">Choose Partner</a>
           </article>
         </div>
-
-        <p class="muted" style="margin-top:10px">
-          Prices exclude ad spend. Month-to-month; cancel anytime.
-        </p>
+        <p class="muted plans-note">Prices exclude ad spend. Month-to-month — pause or scale whenever you need.</p>
       </div>
     </section>
 
-    <!-- Testimonials -->
-    <section id="testimonials" class="section section-alt">
+    <section id="about" class="section about">
       <div class="container">
-        <h2 class="section-title">What clients say</h2>
-        <div class="t-grid">
-          <figure class="t-card"><blockquote>“We were stuck on brochureware. Sidekick Sites shipped a clean page and the phone actually started ringing.”</blockquote><figcaption><strong>Bella Plumbing</strong><span>Owner</span></figcaption></figure>
-          <figure class="t-card"><blockquote>“No jargon, just results. Weekly tweaks + simple report. Booking requests up 2× in a month.”</blockquote><figcaption><strong>Acme Landscapes</strong><span>Director</span></figcaption></figure>
-          <figure class="t-card"><blockquote>“Quick launch, tidy design, and leads going to the right inboxes. Exactly what we needed.”</blockquote><figcaption><strong>Coastal Physio</strong><span>Practice Manager</span></figcaption></figure>
+        <div class="section-head">
+          <h2 class="section-title">Your sidekicks</h2>
+          <p class="muted">Two founders shipping design, copy, ads, and operations so you can stay focused on the work.</p>
         </div>
-      </div>
-    </section>
-
-    <!-- About us -->
-    <section id="about" class="section">
-      <div class="container">
-        <h2 class="section-title">About us</h2>
-
-        <!-- Duo banner -->
         <figure class="duo card">
           <img src="images/team.jpg?v=2" alt="Zane and Michael — Sidekick Sites" loading="lazy">
           <figcaption class="duo-caption">
             Your friendly sidekicks
-            <span class="chip">Website design</span>
-            <span class="chip">Facebook/IG ads</span>
-            <span class="chip">Managed service</span>
+            <span class="chip">Websites</span>
+            <span class="chip">Performance ads</span>
+            <span class="chip">Lead ops</span>
           </figcaption>
         </figure>
 
         <div class="about-us">
           <div class="about-copy">
-            <p class="muted">
-              We’re Zane & Michael. We keep it simple: ship a clean, conversion-focused website,
-              wire it to your inbox, then run steady Facebook/Instagram ads to keep enquiries coming.
-              It’s a <strong>managed service</strong> on a straightforward monthly fee.
-            </p>
+            <p class="muted">We’re Zane & Michael. We keep it simple: ship a conversion-focused website, wire it to your inbox and CRM, then run steady ads with weekly optimisation. It’s a managed service on a transparent monthly fee.</p>
             <ul class="checklist">
               <li>Launch in days, iterate in weeks</li>
               <li>Plain-English updates & weekly tweaks</li>
               <li>Lead tracking you can actually read</li>
             </ul>
             <div class="actions" style="margin-top:14px">
-              <a href="#contact" class="btn btn-primary">Get a quick quote</a>
+              <a href="#contact" class="btn btn-primary">Book intro call</a>
             </div>
           </div>
 
           <div class="people-grid">
             <figure class="person card">
-              <img src="images/zane.jpg?v=2" alt="Zane — sites & funnels" loading="lazy">
+              <img src="images/zane2.jpg" alt="Zane — sites & funnels" loading="lazy">
               <figcaption><h3>Zane</h3><p>Sites, funnels & client success</p></figcaption>
             </figure>
             <figure class="person card">
-              <img src="images/michael.jpg?v=2" alt="Michael — qualified sparky, ops & ads" loading="lazy">
+              <img src="images/michael.jpg" alt="Michael — qualified sparky, ops & ads" loading="lazy">
               <figcaption><h3>Michael</h3><p>Qualified sparky • ops & ads</p></figcaption>
             </figure>
           </div>
@@ -236,51 +380,45 @@
       </div>
     </section>
 
-    <!-- FAQ (accordion) -->
     <section id="faq" class="section">
       <div class="container">
-        <h2 class="section-title">Questions</h2>
-
+        <h2 class="section-title">Questions we get a lot</h2>
         <div class="faq">
           <details>
-            <summary>What do you actually do?</summary>
+            <summary>What does “managed service” cover?</summary>
             <div class="answer">
-              <p>We build your website, wire the contact form to your inbox, and run Facebook/Instagram ads. You get a simple weekly update with results.</p>
+              <p>Everything from website updates to ad creative, budget shifts, lead routing, and weekly reporting. You focus on delivering the work—we handle the funnel.</p>
             </div>
           </details>
           <details>
-            <summary>How long till my site is live?</summary>
+            <summary>How long until I’m live?</summary>
             <div class="answer">
-              <p>Usually days, not weeks. We start simple, ship, and iterate.</p>
+              <p>Most sites go from kickoff to launch in 10–14 days. Ads switch on shortly after with tracking fully wired.</p>
             </div>
           </details>
           <details>
-            <summary>Do I own the website?</summary>
+            <summary>Do I own the assets?</summary>
             <div class="answer">
-              <p>You own your data (leads, domains, ad accounts). We run it as a managed monthly service; if you ever want to take it in-house, we hand over cleanly.</p>
+              <p>Yes—domains, ad accounts, creatives, and data stay in your name. If you ever want to take it in-house, we hand everything over cleanly.</p>
             </div>
           </details>
           <details>
-            <summary>How do I see results each week?</summary>
+            <summary>Can we pause or change scope?</summary>
             <div class="answer">
-              <p>Email notifications for each enquiry; optional Airtable log with source (UTMs) and timestamps. Weekly summary in plain English.</p>
+              <p>Totally. It’s month-to-month. Pause for seasonality, scale when you’re ready, or add experiments as needed.</p>
             </div>
           </details>
         </div>
-
         <div class="actions" style="margin-top:16px">
-          <a class="btn btn-primary shine" href="#contact">Get a quick quote</a>
+          <a class="btn btn-primary shine" href="#contact">Chat about your project</a>
         </div>
       </div>
     </section>
 
-    <!-- Contact -->
     <section id="contact" class="section section-alt">
       <div class="container">
         <h2 class="section-title">Tell us about the job</h2>
-
         <form id="lead-form" class="form card" action="https://formspree.io/f/mqayenbj" method="POST" data-thanks="thank-you.html">
-          <!-- visible fields -->
           <label>Name <input class="input" id="name" name="name" autocomplete="name" required></label>
           <label>Email <input class="input" id="email" name="email" type="email" autocomplete="email" required></label>
           <label>Phone (optional) <input class="input" id="phone" name="phone" inputmode="tel" autocomplete="tel"></label>
@@ -291,17 +429,22 @@
               <option>Facebook/Instagram ads</option>
             </select>
           </label>
+          <label>Monthly budget (ads/website)
+            <select class="input" id="budget" name="budget">
+              <option value="under-1k">Under $1k</option>
+              <option value="1-2k">$1k – $2k</option>
+              <option value="2-5k">$2k – $5k</option>
+              <option value="over-5k">$5k+</option>
+              <option value="not-sure">Not sure yet</option>
+            </select>
+          </label>
           <label>How are we able to assist you today?
             <textarea class="textarea" id="message" name="message" rows="5" required></textarea>
           </label>
-
-          <!-- privacy -->
           <label class="checkbox">
-            <input type="checkbox" required>
+            <input type="checkbox" name="privacy" value="accepted" required>
             <span>I agree to the <a href="./privacy.html">Privacy Policy</a>.</span>
           </label>
-
-          <!-- hidden metadata -->
           <input type="hidden" name="site_url" id="site_url">
           <input type="hidden" name="plan" id="plan">
           <input type="hidden" name="utm_source" id="utm_source">
@@ -309,7 +452,6 @@
           <input type="hidden" name="utm_campaign" id="utm_campaign">
           <input type="hidden" name="utm_term" id="utm_term">
           <input type="hidden" name="utm_content" id="utm_content">
-
           <button class="btn btn-primary shine" type="submit">Send</button>
           <p id="formFeedback" class="muted" role="status" aria-live="polite"></p>
         </form>
@@ -317,7 +459,14 @@
     </section>
   </main>
 
-  <!-- Footer -->
+  <div class="mobile-cta" role="complementary">
+    <div class="mobile-cta__copy">
+      <strong>Ready for more enquiries?</strong>
+      <span>Book a 15-minute launch chat</span>
+    </div>
+    <a class="btn btn-primary" href="#contact">Book now</a>
+  </div>
+
   <footer class="site-footer">
     <div class="container footer-inner">
       <small>© <span id="year"></span> Sidekick Sites</small>
