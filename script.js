@@ -31,6 +31,8 @@ document.addEventListener("DOMContentLoaded", () => {
   /* -------------------- Hero laptop animation -------------------- */
   const heroLaptop = document.querySelector('[data-laptop]');
   const screenImages = $$('.screen-track img');
+  const laptopFrame = heroLaptop ? heroLaptop.querySelector('.laptop') : null;
+  const laptopGif = laptopFrame ? laptopFrame.querySelector('.laptop-gif') : null;
   const metricEls = $$('.metric-value');
   const counted = new Set();
   let screenTimer = null;
@@ -72,7 +74,16 @@ document.addEventListener("DOMContentLoaded", () => {
         counted.add(el);
         animateCount(el);
       });
-      startScreenCarousel();
+      const delay = parseFloat(laptopGif?.dataset.duration || '5') * 1000;
+      if (laptopFrame && laptopGif) {
+        setTimeout(() => {
+          laptopFrame.classList.add('is-ready');
+          startScreenCarousel();
+        }, delay);
+      } else {
+        laptopFrame?.classList.add('is-ready');
+        startScreenCarousel();
+      }
     };
 
     if ('IntersectionObserver' in window) {
@@ -85,40 +96,8 @@ document.addEventListener("DOMContentLoaded", () => {
       }, { threshold: 0.35 });
       heroObserver.observe(heroLaptop);
     }
-
     // Fallback: ensure animation still runs after load
-    setTimeout(openHero, 1200);
-  }
-
-  /* -------------------- Chromakey open laptop screen -------------------- */
-  const laptopImg = $('.laptop-open-img');
-  if (laptopImg) {
-    const makeTransparent = (img) => {
-      const canvas = document.createElement('canvas');
-      const ctx = canvas.getContext('2d');
-      canvas.width = img.naturalWidth;
-      canvas.height = img.naturalHeight;
-      ctx.drawImage(img, 0, 0);
-      const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-      const data = imageData.data;
-      for (let i = 0; i < data.length; i += 4) {
-        const r = data[i];
-        const g = data[i + 1];
-        const b = data[i + 2];
-        // target neon green ~ (0, 255, 102)
-        if (g > 200 && r < 80 && b < 120) {
-          data[i + 3] = 0;
-        }
-      }
-      ctx.putImageData(imageData, 0, 0);
-      img.src = canvas.toDataURL('image/png');
-    };
-
-    if (laptopImg.complete) {
-      makeTransparent(laptopImg);
-    } else {
-      laptopImg.addEventListener('load', () => makeTransparent(laptopImg));
-    }
+    setTimeout(openHero, 800);
   }
 
   /* -------------------- Work laptop animation -------------------- */
