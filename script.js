@@ -114,6 +114,246 @@ document.addEventListener("DOMContentLoaded", () => {
     workObserver.observe(workLaptop);
   }
 
+  /* -------------------- Possibility demos -------------------- */
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  $$('[data-theme-switch]').forEach(lab => {
+    const buttons = $$('[data-theme]', lab);
+    const stage = lab.querySelector('[data-theme-panel]');
+    if (!buttons.length || !stage) return;
+
+    const bg = stage.querySelector('.cta-stage__bg');
+    const tag = stage.querySelector('.cta-tag');
+    const headline = stage.querySelector('.cta-headline');
+    const list = stage.querySelector('.cta-points');
+    const ctaBtn = stage.querySelector('.btn');
+
+    const THEMES = {
+      strategy: {
+        tag: 'Strategy Call',
+        headline: 'Map every touchpoint in 25 minutes.',
+        points: [
+          'Identify friction in your funnel',
+          'Plot ad + landing page sync',
+          'Walk away with a 90-day roadmap'
+        ],
+        gradient: 'linear-gradient(150deg,rgba(56,189,248,0.32),rgba(99,102,241,0.18))',
+        button: 'Reserve a slot'
+      },
+      audit: {
+        tag: 'Ad Account Audit',
+        headline: 'Dissect your Meta & Google campaigns live.',
+        points: [
+          'Heatmap the winning audiences',
+          'Campaign hygiene checklist',
+          'Copy & creative punch-ups in session'
+        ],
+        gradient: 'linear-gradient(160deg,rgba(251,191,36,0.32),rgba(249,115,22,0.2))',
+        button: 'Book my audit'
+      },
+      launch: {
+        tag: 'Launch Accelerator',
+        headline: 'Deploy a full funnel in fourteen days.',
+        points: [
+          'Hero, offer, and proof blocks for each service',
+          'Marketing automation wiring & notifications',
+          'Ads + landing pairings ready for scale'
+        ],
+        gradient: 'linear-gradient(155deg,rgba(34,197,94,0.3),rgba(59,130,246,0.22))',
+        button: 'Start the build'
+      }
+    };
+
+    const applyTheme = (key) => {
+      const theme = THEMES[key];
+      if (!theme) return;
+      buttons.forEach(btn => {
+        const isActive = btn.dataset.theme === key;
+        btn.classList.toggle('is-active', isActive);
+        btn.setAttribute('aria-pressed', String(isActive));
+      });
+      if (bg) bg.style.background = theme.gradient;
+      if (tag) tag.textContent = theme.tag;
+      if (headline) headline.textContent = theme.headline;
+      if (list) {
+        list.innerHTML = '';
+        theme.points.forEach(point => {
+          const li = document.createElement('li');
+          li.textContent = point;
+          list.appendChild(li);
+        });
+      }
+      if (ctaBtn) ctaBtn.textContent = theme.button;
+    };
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => applyTheme(btn.dataset.theme));
+      btn.addEventListener('keydown', (event) => {
+        if (!['ArrowRight', 'ArrowLeft'].includes(event.key)) return;
+        event.preventDefault();
+        const index = buttons.indexOf(btn);
+        const nextIndex = event.key === 'ArrowRight'
+          ? (index + 1) % buttons.length
+          : (index - 1 + buttons.length) % buttons.length;
+        buttons[nextIndex].focus();
+        applyTheme(buttons[nextIndex].dataset.theme);
+      });
+    });
+
+    applyTheme(buttons[0].dataset.theme);
+  });
+
+  $$('[data-comparison]').forEach(block => {
+    const stage = block.querySelector('.comparison-stage');
+    const slider = block.querySelector('input[type="range"]');
+    if (!stage || !slider) return;
+
+    const setReveal = (value) => {
+      const pct = Math.min(100, Math.max(0, Number(value)));
+      stage.style.setProperty('--reveal', `${pct}%`);
+    };
+
+    slider.addEventListener('input', () => setReveal(parseFloat(slider.value)));
+    setReveal(parseFloat(slider.value));
+
+    let dragging = false;
+    const updateFromPointer = (event) => {
+      const rect = stage.getBoundingClientRect();
+      const x = event.clientX ?? 0;
+      const pct = ((x - rect.left) / rect.width) * 100;
+      const clamped = Math.min(100, Math.max(0, pct));
+      setReveal(clamped);
+      slider.value = clamped.toFixed(1);
+    };
+
+    stage.addEventListener('pointerdown', (event) => {
+      dragging = true;
+      stage.setPointerCapture(event.pointerId);
+      event.preventDefault();
+      updateFromPointer(event);
+    });
+
+    stage.addEventListener('pointermove', (event) => {
+      if (!dragging) return;
+      updateFromPointer(event);
+    });
+
+    const stopDrag = (event) => {
+      if (!dragging) return;
+      dragging = false;
+      try { stage.releasePointerCapture(event.pointerId); } catch {}
+    };
+
+    stage.addEventListener('pointerup', stopDrag);
+    stage.addEventListener('pointercancel', stopDrag);
+    stage.addEventListener('lostpointercapture', () => { dragging = false; });
+  });
+
+  $$('[data-marquee]').forEach(wrapper => {
+    const track = wrapper.querySelector('.ticker-track');
+    if (!track) return;
+    const originals = Array.from(track.children);
+    if (!originals.length) return;
+
+    const ensureFill = () => {
+      const wrapperWidth = Math.max(wrapper.getBoundingClientRect().width, 1);
+      let iterations = 0;
+      while (track.scrollWidth < wrapperWidth * 2 && iterations < 6) {
+        originals.forEach(card => track.appendChild(card.cloneNode(true)));
+        iterations += 1;
+      }
+    };
+    ensureFill();
+
+    if (prefersReducedMotion) return;
+
+    let gap = 0;
+    const updateGap = () => {
+      const styles = getComputedStyle(track);
+      gap = parseFloat(styles.columnGap || styles.gap || '0') || 0;
+    };
+
+    const getFirstWidth = () => {
+      const first = track.firstElementChild;
+      if (!first) return 0;
+      return first.getBoundingClientRect().width + gap;
+    };
+
+    const getLastWidth = () => {
+      const last = track.lastElementChild;
+      if (!last) return 0;
+      return last.getBoundingClientRect().width + gap;
+    };
+
+    const direction = wrapper.dataset.direction === 'reverse' ? 1 : -1;
+    const baseSpeed = Math.max(parseFloat(wrapper.dataset.speed || '48'), 1);
+    let targetSpeed = baseSpeed;
+    let currentSpeed = baseSpeed;
+    let offset = 0;
+    let lastTime = null;
+    let rafId = null;
+
+    const tick = (time) => {
+      if (lastTime === null) lastTime = time;
+      const delta = time - lastTime;
+      lastTime = time;
+
+      const easing = Math.min(1, delta / 240);
+      currentSpeed += (targetSpeed - currentSpeed) * easing;
+
+      offset += direction * (currentSpeed * delta) / 1000;
+
+      if (direction === -1) {
+        let firstWidth = getFirstWidth();
+        while (firstWidth && offset <= -firstWidth) {
+          offset += firstWidth;
+          track.appendChild(track.firstElementChild);
+          firstWidth = getFirstWidth();
+        }
+      } else {
+        while (offset >= 0) {
+          const lastWidth = getLastWidth();
+          if (!lastWidth) break;
+          offset -= lastWidth;
+          track.insertBefore(track.lastElementChild, track.firstElementChild);
+        }
+      }
+
+      track.style.transform = `translateX(${offset}px)`;
+      rafId = requestAnimationFrame(tick);
+    };
+
+    const start = () => {
+      if (rafId) cancelAnimationFrame(rafId);
+      updateGap();
+      offset = direction === -1 ? 0 : -getLastWidth();
+      lastTime = null;
+      currentSpeed = baseSpeed;
+      targetSpeed = baseSpeed;
+      track.style.transform = `translateX(${offset}px)`;
+      rafId = requestAnimationFrame(tick);
+    };
+
+    const slow = () => { targetSpeed = baseSpeed * 0.35; };
+    const resume = () => { targetSpeed = baseSpeed; };
+
+    wrapper.addEventListener('pointerenter', slow);
+    wrapper.addEventListener('pointerleave', resume);
+    wrapper.addEventListener('pointerdown', slow);
+    wrapper.addEventListener('pointerup', resume);
+    wrapper.addEventListener('pointercancel', resume);
+    wrapper.addEventListener('focusin', slow);
+    wrapper.addEventListener('focusout', resume);
+
+    const ro = new ResizeObserver(() => {
+      ensureFill();
+      start();
+    });
+    ro.observe(wrapper);
+
+    requestAnimationFrame(start);
+  });
+
   /* -------------------- Footer year -------------------- */
   const yearEl = $('#year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
