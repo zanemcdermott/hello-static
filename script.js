@@ -14,14 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  /*---------------------Supabase------------------------------------*/
-import { createClient } from '@supabase/supabase-js'
-
-const supabaseUrl = 'https://bsqsamfigvsxwcbnhebq.supabase.co'
-const supabaseKey = process.env.SUPABASE_KEY
-const supabase = createClient(supabaseUrl, supabaseKey)
-
-
   /* -------------------- Active nav highlight -------------------- */
   const navLinks = $$(".nav a[href^='#']");
   const sections = navLinks.map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
