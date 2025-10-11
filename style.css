@@ -94,17 +94,9 @@ a:hover{color:var(--brand-start)}
 .metric-value{display:block;font-size:28px;font-weight:700;color:#fff}
 .metric-label{display:block;font-size:13px;color:var(--muted)}
 
-.hero-visual{position:relative;justify-self:center}
-.laptop{position:relative;width:min(540px,80vw)}
-.laptop-gif,.laptop-open-img{width:100%;display:block;border-radius:20px;filter:drop-shadow(0 22px 45px rgba(15,23,42,.55));transition:opacity 0 ease}
-.laptop-gif{position:relative;z-index:1}
-.laptop-open-img{position:absolute;inset:0;opacity:0;z-index:0;pointer-events:none}
-.laptop.is-ready .laptop-open-img{opacity:1;z-index:2}
-.laptop.is-ready .laptop-gif{opacity:0;visibility:hidden}
-.laptop-screen{position:absolute;top:25%;left:14.8%;right:14.8%;bottom:31.5%;overflow:hidden;display:flex;align-items:center;justify-content:center;pointer-events:none;z-index:3}
-.screen-track{position:relative;width:100%;height:100%}
-.screen-track img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#000;opacity:0;transition:opacity .8s ease}
-.screen-track img.is-active{opacity:1}
+.hero-visual{position:relative;justify-self:center;display:flex;align-items:flex-end;justify-content:center}
+.hero-device{position:relative;width:min(560px,85vw);aspect-ratio:1/1;display:flex;align-items:flex-end;justify-content:center}
+.hero-device__base{width:100%;height:100%;object-fit:contain;object-position:center bottom;filter:drop-shadow(0 22px 45px rgba(15,23,42,.55));pointer-events:none}
 .hero-badge{position:absolute;padding:10px 14px;border-radius:999px;background:rgba(15,23,42,0.75);border:1px solid rgba(99,102,241,0.3);font-size:13px;color:var(--muted);backdrop-filter:blur(14px)}
 .hero-badge--ads{top:-16px;right:-18px}
 .hero-badge--report{bottom:-28px;left:-6px}
@@ -398,6 +390,7 @@ body{padding-bottom:140px}
   .nav{display:none}
   .hero{padding:56px 0 140px}
   .hero-layout{gap:48px}
+  .hero-device{width:min(460px,88vw)}
   .hero-content{gap:20px;text-align:center}
   .hero h1{font-size:42px}
   .hero-lead{font-size:18px}
@@ -427,6 +420,7 @@ body{padding-bottom:140px}
 @media (max-width:520px){
   .hero{padding:64px 0 120px}
   .hero-layout{gap:40px}
+  .hero-device{width:min(360px,92vw)}
   .section{padding:80px 0}
   .section-title{font-size:32px}
   .hero-actions{gap:12px}
