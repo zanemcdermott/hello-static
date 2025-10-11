@@ -28,6 +28,125 @@ document.addEventListener("DOMContentLoaded", () => {
     sections.forEach(sec => io.observe(sec));
   }
 
+  /* -------------------- Hero showcase -------------------- */
+  const heroShowcase = document.querySelector('.hero-showcase');
+  if (heroShowcase) {
+    const SLIDE_MS = 4000;
+    const sources = {
+      laptop: Array.from({ length: 6 }, (_, i) => `images/screen/laptop${i + 1}.png`),
+      phone: Array.from({ length: 6 }, (_, i) => `images/screen/phone${i + 1}.png`)
+    };
+    const frameCount = sources.laptop.length;
+    const stages = new Map();
+
+    heroShowcase.querySelectorAll('.stage').forEach(stage => {
+      const role = stage.dataset.role;
+      const slides = Array.from(stage.querySelectorAll('.slide'));
+      if (!role || slides.length < 2) return;
+      stages.set(role, { stage, slides, active: 0 });
+    });
+
+    if (frameCount && stages.size === 2) {
+      const loadImage = (src) => new Promise((resolve, reject) => {
+        const img = new Image();
+        img.onload = () => resolve(src);
+        img.onerror = () => reject(new Error(`Failed to load ${src}`));
+        img.src = src;
+      });
+
+      const preloadAll = () => {
+        const assets = [...sources.laptop, ...sources.phone];
+        return Promise.all(assets.map(loadImage));
+      };
+
+      const clampIndex = (index) => {
+        const mod = index % frameCount;
+        return mod < 0 ? mod + frameCount : mod;
+      };
+
+      let currentIndex = 0;
+      let timer = null;
+      let playing = false;
+
+      const showFrame = (index, instant = false) => {
+        const normalized = clampIndex(index);
+        stages.forEach((config, role) => {
+          const deviceSources = sources[role];
+          if (!deviceSources || !deviceSources.length) return;
+
+          const nextSlot = instant ? config.active : config.active ^ 1;
+          const nextImg = config.slides[nextSlot];
+          if (!nextImg) return;
+          nextImg.src = deviceSources[normalized];
+
+          if (instant) {
+            config.slides.forEach((img, idx) => {
+              const isActive = idx === nextSlot;
+              img.style.transition = 'none';
+              img.style.opacity = isActive ? '1' : '0';
+              img.classList.toggle('is-active', isActive);
+            });
+            requestAnimationFrame(() => {
+              config.slides.forEach(img => {
+                img.style.transition = '';
+                img.style.opacity = '';
+              });
+            });
+          } else {
+            const current = config.slides[config.active];
+            nextImg.classList.add('is-active');
+            if (current && current !== nextImg) current.classList.remove('is-active');
+          }
+
+          config.active = nextSlot;
+        });
+        currentIndex = normalized;
+      };
+
+      const schedule = () => {
+        clearTimeout(timer);
+        if (!playing) return;
+        timer = window.setTimeout(() => {
+          showFrame(currentIndex + 1);
+          schedule();
+        }, SLIDE_MS);
+      };
+
+      const play = () => {
+        if (playing) return;
+        playing = true;
+        schedule();
+      };
+
+      const pause = () => {
+        if (!playing) return;
+        playing = false;
+        clearTimeout(timer);
+      };
+
+      const goto = (index) => {
+        showFrame(index);
+        if (playing) schedule();
+      };
+
+      const enableShowcase = () => {
+        showFrame(0, true);
+        heroShowcase.classList.add('is-ready');
+
+        playing = true;
+        schedule();
+        window.slideshow = Object.assign({}, window.slideshow, { play, pause, goto });
+      };
+
+      preloadAll().then(enableShowcase).catch(err => {
+        console.warn(err);
+        enableShowcase();
+      });
+    } else {
+      heroShowcase.classList.add('is-ready');
+    }
+  }
+
   /* -------------------- Work laptop animation -------------------- */
   const workLaptop = document.querySelector('[data-laptop-preview]');
   if (workLaptop && 'IntersectionObserver' in window) {

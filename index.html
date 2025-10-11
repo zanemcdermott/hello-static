@@ -67,8 +67,16 @@
           </div>
 
         <div class="hero-visual">
-          <div class="hero-device">
-            <img class="hero-device__base" src="images/laptop-phone.png" alt="Laptop and phone showcase mockup" loading="lazy" />
+          <div class="hero-showcase" role="img" aria-label="Showcase of recent work displayed on laptop and phone">
+            <img class="hero-showcase__bg" src="images/screen/laptop-phone.png" alt="" decoding="async" loading="lazy" />
+            <div class="stage stage--laptop" data-role="laptop" aria-hidden="true">
+              <img class="slide slide--a is-active" alt="" decoding="async" loading="lazy">
+              <img class="slide slide--b" alt="" decoding="async" loading="lazy">
+            </div>
+            <div class="stage stage--phone" data-role="phone" aria-hidden="true">
+              <img class="slide slide--a is-active" alt="" decoding="async" loading="lazy">
+              <img class="slide slide--b" alt="" decoding="async" loading="lazy">
+            </div>
           </div>
         </div>
       </div>
@@ -99,7 +107,7 @@
         <div class="section-head">
           <h2 class="section-title">Everything you need to capture and convert</h2>
           <p class="muted">From the first impression to the follow-up, we build the entire journey and keep it tuned.</p>
-        </div>
+        </div>`
         <div class="capability-grid">
           <article class="capability-card">
             <header>

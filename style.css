@@ -1,3 +1,5 @@
+/* Phone overlay alignment: adjust the --phone-* variables (percent values) if the phone slideshow needs micro-tuning */
+
 /* --------------------------------------------------
    Base variables & reset
 -------------------------------------------------- */
@@ -20,6 +22,16 @@
   --radius-sm:12px;
   --radius-md:16px;
   --radius-lg:22px;
+  --laptop-left:7.62%;
+  --laptop-top:33.89%;
+  --laptop-w:56.25%;
+  --laptop-h:35.16%;
+  --laptop-boarder: 18px;
+  --phone-left:69.50%;
+  --phone-top:30.20%;
+  --phone-w:20.00%;
+  --phone-h:43.00%;
+  --fade-ms:650ms;
   font-family:"Inter", "General Sans", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   color-scheme:dark;
 }
@@ -95,8 +107,14 @@ a:hover{color:var(--brand-start)}
 .metric-label{display:block;font-size:13px;color:var(--muted)}
 
 .hero-visual{position:relative;justify-self:center;display:flex;align-items:flex-end;justify-content:center}
-.hero-device{position:relative;width:min(560px,85vw);aspect-ratio:1/1;display:flex;align-items:flex-end;justify-content:center}
-.hero-device__base{width:100%;height:100%;object-fit:contain;object-position:center bottom;filter:drop-shadow(0 22px 45px rgba(15,23,42,.55));pointer-events:none}
+.hero-showcase{position:relative;width:min(560px,85vw);aspect-ratio:1/1;display:block;filter:drop-shadow(0 22px 45px rgba(15,23,42,.55));opacity:0;transition:opacity 280ms ease}
+.hero-showcase.is-ready{opacity:1}
+.hero-showcase__bg{display:block;width:100%;height:auto;pointer-events:none;user-select:none}
+.stage{position:absolute;overflow:hidden;pointer-events:none;left:var(--stage-left,0);top:var(--stage-top,0);width:var(--stage-width,100%);height:var(--stage-height,100%);z-index:1}
+.stage--laptop{--stage-left:var(--laptop-left);--stage-top:var(--laptop-top);--stage-width:var(--laptop-w);--stage-height:var(--laptop-h)}
+.stage--phone{--stage-left:var(--phone-left);--stage-top:var(--phone-top);--stage-width:var(--phone-w);--stage-height:var(--phone-h)}
+.slide{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity var(--fade-ms) linear;pointer-events:none;backface-visibility:hidden;will-change:opacity}
+.slide.is-active{opacity:1}
 .hero-badge{position:absolute;padding:10px 14px;border-radius:999px;background:rgba(15,23,42,0.75);border:1px solid rgba(99,102,241,0.3);font-size:13px;color:var(--muted);backdrop-filter:blur(14px)}
 .hero-badge--ads{top:-16px;right:-18px}
 .hero-badge--report{bottom:-28px;left:-6px}
@@ -390,7 +408,7 @@ body{padding-bottom:140px}
   .nav{display:none}
   .hero{padding:56px 0 140px}
   .hero-layout{gap:48px}
-  .hero-device{width:min(460px,88vw)}
+  .hero-showcase{width:min(460px,88vw)}
   .hero-content{gap:20px;text-align:center}
   .hero h1{font-size:42px}
   .hero-lead{font-size:18px}
@@ -420,7 +438,7 @@ body{padding-bottom:140px}
 @media (max-width:520px){
   .hero{padding:64px 0 120px}
   .hero-layout{gap:40px}
-  .hero-device{width:min(360px,92vw)}
+  .hero-showcase{width:min(360px,92vw)}
   .section{padding:80px 0}
   .section-title{font-size:32px}
   .hero-actions{gap:12px}
